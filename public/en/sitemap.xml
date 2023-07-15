@@ -75,6 +75,42 @@
                 href="/2-prerequiste/2.1-createcloud9workspace/"
                 />
   </url><url>
+    <loc>/2-prerequiste/2.2-ensurenodejsversion/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-prerequiste/2.2-ensurenodejsversion/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-prerequiste/2.2-ensurenodejsversion/"
+                />
+  </url><url>
+    <loc>/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/"
+                />
+  </url><url>
+    <loc>/2-prerequiste/2.4-installamplifycli/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-prerequiste/2.4-installamplifycli/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-prerequiste/2.4-installamplifycli/"
+                />
+  </url><url>
     <loc>/4-s3log/4.1-updateiamrole/</loc>
     <xhtml:link
                 rel="alternate"
@@ -109,18 +145,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/"
-                />
-  </url><url>
-    <loc>/2-prerequiste/2.2-installamplifycli/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-prerequiste/2.2-installamplifycli/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-prerequiste/2.2-installamplifycli/"
                 />
   </url><url>
     <loc>/4-s3log/4.2-creates3bucket/</loc>

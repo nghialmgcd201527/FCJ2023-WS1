@@ -8,22 +8,36 @@ pre: " <b> 2.1 </b> "
 
 #### Khởi tạo Cloud9
 
-1. Nhập "Cloud9" ở thanh tìm kiếm service trên AWS Console sau đó chọn "Cloud9"
+1. Nhập **Cloud9** ở thanh tìm kiếm service trên AWS Console sau đó chọn **Cloud9**.
+2. Chọn **Create environment**
+3. Đặt tên cho Cloud9 Workspace là **serverless-workshop.**
+4. Ở mục **Description** hãy nhập mục đích bạn muốn sử dụng trong workspace này. Nhập **deploy "Todos app"**
+5. **Environment type,** ở đây chúng ta sẽ tạo một server để chạy Cloud9 workspace này. Mình sẽ chọn option **New EC2 instance** để tạo một server mới.
 
-Tổng quan kiến trúc sau khi các bạn hoàn tất bước này sẽ như sau:
+![Name for Cloud9 Workspace và chọn Environment type](/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-1.png)
 
-![VPC](/images/arc-01.png)
+6. Sang phần setting cho **New EC2 instance,** chọn **Additional instance types** sau đó chúng ta chọn loại **t3.medium.**
 
-Để tìm hiểu cách tạo các EC2 instance và VPC với public/private subnet các bạn có thể tham khảo bài lab :
+![Setting cho new EC2 instance](/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-2.png)
 
-- [Giới thiệu về Amazon EC2](https://000004.awsstudygroup.com/vi/)
-- [Làm việc với Amazon VPC](https://000003.awsstudygroup.com/vi/)
+7. Giữ nguyên mặc định cho những thiết lập khác.
 
-### Nội dung
+![Keep default](/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-3.png)
 
-- [Tạo VPC](2.1.1-createvpc/)
-- [Tạo Public subnet](2.1.2-createpublicsubnet/)
-- [Tạo Private subnet](2.1.3-createprivatesubnet/)
-- [Tạo security group](2.1.4-createsecgroup/)
-- [Tạo máy chủ Linux public](2.1.5-createec2linux/)
-- [Tạo máy chủ Windows private](2.1.6-createec2windows/)
+8. Click **Create** và đợi khoảng 10 phút để Cloud9 Workspace được tạo.
+
+![VPC](/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-4.png)
+
+Khi Cloud9 Workspace được tạo xong, chúng ta sẽ có một môi trường để làm việc với AWS CLI và các công cụ khác.
+
+9. Trong danh sách các **Environments** được tạo ra, hãy tìm environment **serverless-workshop** và click vào nút **Open** để mở môi trường Cloud9.
+
+![VPC](/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-4.png)
+
+10. Sau khi môi trường mở ra, chúng ta hãy tắt những phần bên dưới đã được khởi tạo lúc bắt đầu và tạo một **trang terminal** mới.
+
+![VPC](/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-5.png)
+
+Workspace của chúng ta sẽ trông như thế này.
+
+![VPC](/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-6.png)

@@ -12,21 +12,21 @@
     <title>Các bước chuẩn bị :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1689269065" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1689269065" rel="stylesheet">
-    <link href="/css/hybrid.css?1689269065" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1689269065" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1689269065" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689269065" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1689269065" rel="stylesheet">
-    <link href="/css/theme.css?1689269065" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1689269065" rel="stylesheet">
+    <link href="/css/nucleus.css?1689408077" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1689408077" rel="stylesheet">
+    <link href="/css/hybrid.css?1689408077" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1689408077" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1689408077" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689408077" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1689408077" rel="stylesheet">
+    <link href="/css/theme.css?1689408077" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1689408077" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1689269065" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1689408077" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1689269065"></script>
+    <script src="/js/jquery-3.3.1.min.js?1689408077"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1689269065"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1689269065"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1689408077"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1689408077"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1689269065"></script>
+<script type="text/javascript" src="/js/search.js?1689408077"></script>
 
     
   </div>
@@ -167,13 +167,69 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.2-installamplifycli/" title="Tải Amplify CLI" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.2-ensurenodejsversion/" title="Ensure Node.js Version" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.2-installamplifycli/">
-           <b> 2.2 </b> Tải Amplify CLI
+      <a href="/vi/2-prerequiste/2.2-ensurenodejsversion/">
+           <b> 2.2 </b> Ensure Node.js Version
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/" title="Clone Git repository và tránh những vấn đề liên quan đến dung lượng trống của Cloud9" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/">
+           <b> 2.3 </b> Clone Git repository và tránh những vấn đề liên quan đến dung lượng trống của Cloud9
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.4-installamplifycli/" title="Cài đặt Amplify CLI" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.4-installamplifycli/">
+           <b> 2.4 </b> Cài đặt Amplify CLI
           
             <i class="fas fa-check read-icon"></i>
           
@@ -834,6 +890,7 @@
   <ul>
     <li>
       <ul>
+        <li></li>
         <li><a href="#nôi-dung">Nội dung</a></li>
       </ul>
     </li>
@@ -863,19 +920,36 @@
 
 
 	
-<div class="notices info" ><p>Bạn cần tạo sẵn 1 Linux instance thuộc public subnet và 1 Window instance thuộc private subnet để thực hiện bài thực hành này.</p>
+<div class="notices warning" ><p>Hãy nhớ rằng Cloud9 workspace chỉ nên được tạo ra bởi IAM user (hoặc là được gán vào một IAM role thích hợp) với đặc quyền của Admin, không được dùng root user.</p>
 </div>
 
-<p>Để tìm hiểu cách tạo các EC2 instance và VPC với public/private subnet các bạn có thể tham khảo bài lab :</p>
+<h4 id="cloud9-workspace"><strong>Cloud9 Workspace</strong></h4>
+<p>Chúng ta thường dùng môi trường phát triển tích hợp (Integrated Development Environment - IDE) ở local, trong bài workshop này, chúng ta sẽ dùng Cloud9. Nó là một IDE chạy trên cloud sử dụng trình duyệt, bao gồm những tính năng quan trọng, thiết yếu ở local IDE mà chúng ta thường dùng như viết, chạy, debug code. Cloud9 đã được trang bị sẵn những gói tệp tin như JavaScript, Python, NodeJS và những thứ khác <a href="https://aws.amazon.com/cloud9/">ở đây</a></p>
+<blockquote>
+<p>Để các dịch vụ của AWS phản hồi nhanh hơn, hãy chọn Region gần nhất trong suốt buổi workshop.</p>
+</blockquote>
+<h4 id="các-vùng-hỗ-trợ-service-amazon-rekognition"><strong>Các vùng hỗ trợ service Amazon Rekognition</strong></h4>
+<p>Hãy lưu ý rằng không phải tất cả các service của AWS luôn có sẵn tại tất cả các vùng. Trong bài workshop này, chúng ta sẽ sử dụng service Amazon Rekognition, nó sẽ chỉ phục vụ cho các vùng dưới đây:</p>
 <ul>
-<li><a href="https://000004.awsstudygroup.com/vi/">Giới thiệu về Amazon EC2</a></li>
-<li><a href="https://000003.awsstudygroup.com/vi/">Làm việc với Amazon VPC</a></li>
+<li>US East (Ohio) us-east-2</li>
+<li>US East (N. Virginia) us-east-1</li>
+<li>US West (N. California) us-west-1</li>
+<li>US West (Oregon) us-west-2</li>
+<li>Asia Pacific (Mumbai) ap-south-1</li>
+<li>Asia Pacific (Seoul) ap-northeast-2</li>
+<li>Asia Pacific (Singapore) ap-southeast-1</li>
+<li>Asia Pacific (Sydney) ap-southeast-2</li>
+<li>Asia Pacific (Tokyo) ap-northeast-1</li>
+<li>Canada (Central) ca-central-1</li>
+<li>Europe (Frankfurt) eu-central-1</li>
+<li>Europe (Ireland) eu-west-1</li>
+<li>Europe (London) eu-west-2</li>
 </ul>
-<p>Để sử dụng System Manager để quản lý window instance nói riêng và các instance nói chung của chúng ta trên AWS, ta cần phải cung cấp quyền cho các instance của chúng ta có thể làm việc với System Manager.Trong phần chuẩn bị này, chúng ta cũng sẽ tiến hành tạo IAM Role để cấp quyền cho các instance có thể làm việc với System Manager.</p>
+<p>Xem thêm cập nhật mới nhất về <a href="https://docs.aws.amazon.com/general/latest/gr/rekognition.html" title="Amazon Rekognition">Amazon Rekognition</a></p>
 <h3 id="nôi-dung">Nội dung</h3>
 <ul>
-<li><a href="2.1-createec2/">Tạo Cloud9 Workspace</a></li>
-<li><a href="2.2-createiamrole/">Tải Amplify CLI</a></li>
+<li><a href="2.1-createcloud9workspace/">Tạo Cloud9 Workspace</a></li>
+<li><a href="2.2-installamplifycli/">Cài đặt Amplify CLI</a></li>
 </ul>
 
 
@@ -954,6 +1028,38 @@
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1271,19 +1377,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1689269065"></script>
-    <script src="/js/perfect-scrollbar.min.js?1689269065"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1689269065"></script>
-    <script src="/js/jquery.sticky.js?1689269065"></script>
-    <script src="/js/featherlight.min.js?1689269065"></script>
-    <script src="/js/highlight.pack.js?1689269065"></script>
+    <script src="/js/clipboard.min.js?1689408077"></script>
+    <script src="/js/perfect-scrollbar.min.js?1689408077"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1689408077"></script>
+    <script src="/js/jquery.sticky.js?1689408077"></script>
+    <script src="/js/featherlight.min.js?1689408077"></script>
+    <script src="/js/highlight.pack.js?1689408077"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1689269065"></script>
-    <script src="/js/learn.js?1689269065"></script>
-    <script src="/js/hugo-learn.js?1689269065"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1689408077"></script>
+    <script src="/js/learn.js?1689408077"></script>
+    <script src="/js/hugo-learn.js?1689408077"></script>
 
-    <link href="/mermaid/mermaid.css?1689269065" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1689269065"></script>
+    <link href="/mermaid/mermaid.css?1689408077" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1689408077"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

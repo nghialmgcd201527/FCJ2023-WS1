@@ -12,21 +12,21 @@
     <title>Tạo Cloud9 Workspace :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1689269065" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1689269065" rel="stylesheet">
-    <link href="/css/hybrid.css?1689269065" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1689269065" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1689269065" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689269065" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1689269065" rel="stylesheet">
-    <link href="/css/theme.css?1689269065" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1689269065" rel="stylesheet">
+    <link href="/css/nucleus.css?1689408077" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1689408077" rel="stylesheet">
+    <link href="/css/hybrid.css?1689408077" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1689408077" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1689408077" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689408077" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1689408077" rel="stylesheet">
+    <link href="/css/theme.css?1689408077" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1689408077" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1689269065" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1689408077" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1689269065"></script>
+    <script src="/js/jquery-3.3.1.min.js?1689408077"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1689269065"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1689269065"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1689408077"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1689408077"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1689269065"></script>
+<script type="text/javascript" src="/js/search.js?1689408077"></script>
 
     
   </div>
@@ -167,13 +167,69 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.2-installamplifycli/" title="Tải Amplify CLI" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.2-ensurenodejsversion/" title="Ensure Node.js Version" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.2-installamplifycli/">
-           <b> 2.2 </b> Tải Amplify CLI
+      <a href="/vi/2-prerequiste/2.2-ensurenodejsversion/">
+           <b> 2.2 </b> Ensure Node.js Version
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/" title="Clone Git repository và tránh những vấn đề liên quan đến dung lượng trống của Cloud9" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/">
+           <b> 2.3 </b> Clone Git repository và tránh những vấn đề liên quan đến dung lượng trống của Cloud9
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.4-installamplifycli/" title="Cài đặt Amplify CLI" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.4-installamplifycli/">
+           <b> 2.4 </b> Cài đặt Amplify CLI
           
             <i class="fas fa-check read-icon"></i>
           
@@ -840,7 +896,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#nôi-dung">Nội dung</a></li>
+        <li></li>
       </ul>
     </li>
   </ul>
@@ -868,23 +924,38 @@
 
 
 
-	<p>Trong bước này, chúng ta sẽ cần tạo một VPC có 2 subnet public / private. Sau đó tạo 1 EC2 Instance Linux nằm trong public subnet,  1 EC2 Instance Windows nằm trong private subnet.</p>
-<p>Tổng quan kiến trúc sau khi các bạn hoàn tất bước này sẽ như sau:</p>
-<p><img src="/images/arc-01.png" alt="VPC"></p>
-<p>Để tìm hiểu cách tạo các EC2 instance và VPC với public/private subnet các bạn có thể tham khảo bài lab :</p>
-<ul>
-<li><a href="https://000004.awsstudygroup.com/vi/">Giới thiệu về Amazon EC2</a></li>
-<li><a href="https://000003.awsstudygroup.com/vi/">Làm việc với Amazon VPC</a></li>
-</ul>
-<h3 id="nôi-dung">Nội dung</h3>
-<ul>
-<li><a href="2.1.1-createvpc/">Tạo VPC</a></li>
-<li><a href="2.1.2-createpublicsubnet/">Tạo Public subnet</a></li>
-<li><a href="2.1.3-createprivatesubnet/">Tạo Private subnet</a></li>
-<li><a href="2.1.4-createsecgroup/">Tạo security group</a></li>
-<li><a href="2.1.5-createec2linux/">Tạo máy chủ Linux public</a></li>
-<li><a href="2.1.6-createec2windows/">Tạo máy chủ Windows private</a></li>
-</ul>
+	<h4 id="khởi-tạo-cloud9">Khởi tạo Cloud9</h4>
+<ol>
+<li>Nhập <strong>Cloud9</strong> ở thanh tìm kiếm service trên AWS Console sau đó chọn <strong>Cloud9</strong>.</li>
+<li>Chọn <strong>Create environment</strong></li>
+<li>Đặt tên cho Cloud9 Workspace là <strong>serverless-workshop.</strong></li>
+<li>Ở mục <strong>Description</strong> hãy nhập mục đích bạn muốn sử dụng trong workspace này. Nhập <strong>deploy &ldquo;Todos app&rdquo;</strong></li>
+<li><strong>Environment type,</strong> ở đây chúng ta sẽ tạo một server để chạy Cloud9 workspace này. Mình sẽ chọn option <strong>New EC2 instance</strong> để tạo một server mới.</li>
+</ol>
+<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-1.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<ol start="6">
+<li>Sang phần setting cho <strong>New EC2 instance,</strong> chọn <strong>Additional instance types</strong> sau đó chúng ta chọn loại <strong>t3.medium.</strong></li>
+</ol>
+<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-2.png" alt="Setting cho new EC2 instance"></p>
+<ol start="7">
+<li>Giữ nguyên mặc định cho những thiết lập khác.</li>
+</ol>
+<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-3.png" alt="Keep default"></p>
+<ol start="8">
+<li>Click <strong>Create</strong> và đợi khoảng 10 phút để Cloud9 Workspace được tạo.</li>
+</ol>
+<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-4.png" alt="VPC"></p>
+<p>Khi Cloud9 Workspace được tạo xong, chúng ta sẽ có một môi trường để làm việc với AWS CLI và các công cụ khác.</p>
+<ol start="9">
+<li>Trong danh sách các <strong>Environments</strong> được tạo ra, hãy tìm environment <strong>serverless-workshop</strong> và click vào nút <strong>Open</strong> để mở môi trường Cloud9.</li>
+</ol>
+<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-4.png" alt="VPC"></p>
+<ol start="10">
+<li>Sau khi môi trường mở ra, chúng ta hãy tắt những phần bên dưới đã được khởi tạo lúc bắt đầu và tạo một <strong>trang terminal</strong> mới.</li>
+</ol>
+<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-5.png" alt="VPC"></p>
+<p>Workspace của chúng ta sẽ trông như thế này.</p>
+<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-6.png" alt="VPC"></p>
 
 
 
@@ -979,6 +1050,38 @@
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1270,7 +1373,7 @@
 			<a class="nav nav-prev" href="/vi/2-prerequiste/" title="Các bước chuẩn bị"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/2-prerequiste/2.2-installamplifycli/" title="Tải Amplify CLI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/2-prerequiste/2.2-ensurenodejsversion/" title="Ensure Node.js Version" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1280,19 +1383,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1689269065"></script>
-    <script src="/js/perfect-scrollbar.min.js?1689269065"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1689269065"></script>
-    <script src="/js/jquery.sticky.js?1689269065"></script>
-    <script src="/js/featherlight.min.js?1689269065"></script>
-    <script src="/js/highlight.pack.js?1689269065"></script>
+    <script src="/js/clipboard.min.js?1689408077"></script>
+    <script src="/js/perfect-scrollbar.min.js?1689408077"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1689408077"></script>
+    <script src="/js/jquery.sticky.js?1689408077"></script>
+    <script src="/js/featherlight.min.js?1689408077"></script>
+    <script src="/js/highlight.pack.js?1689408077"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1689269065"></script>
-    <script src="/js/learn.js?1689269065"></script>
-    <script src="/js/hugo-learn.js?1689269065"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1689408077"></script>
+    <script src="/js/learn.js?1689408077"></script>
+    <script src="/js/hugo-learn.js?1689408077"></script>
 
-    <link href="/mermaid/mermaid.css?1689269065" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1689269065"></script>
+    <link href="/mermaid/mermaid.css?1689408077" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1689408077"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

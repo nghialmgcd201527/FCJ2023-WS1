@@ -17,17 +17,121 @@ Cách nó hoạt động:
 3. AWS Lambda sẽ thực thi code của bạn khi trigger được kích hoạt, sau đó nó sẽ tự động quản lí tài nguyên tính toán cho code của bạn.
 4. Chỉ trả tiền cho thời gian thực thi code của bạn (và số lượng tài nguyên tính toán mà code của bạn sử dụng).
 
-Đối với **Windows instance** nằm trong **private subnet**, không có **public IP**, không có **internet gateway** nên không thể đi ra ngoài **internet.**\
-Với loại instance này, cách làm truyền thống là ta sẽ sử dụng kỹ thuật Bastion host tốn nhiều chi phí và công sức, nhưng ở đây chúng ta sẽ sử dụng Session Manager với loại này.\
-Cơ bản là **private instance** vẫn phải mở cổng **TCP 443** tới **System Manager**, nhưng không cho kết nối đó đi ra ngoài internet mà chỉ cho đi trong chính VPC của mình, nên đảm bảo được vấn đề bảo mật.\
-Để làm được điều đó, ta phải đưa endpoint của System Manager vào trong VPC, nghĩa là sử dụng **VPC interface endpoint:**
+#### Phân tích một Lambda function
 
-![ConnectPrivate](/images/arc-03.png)
+Lambda function **handler** là một hàm trong code của bạn, nó sẽ xử lí các events. Khi một chức năng được gọi, Lambda sẽ thực thi hàm **handler.** Khi hàm **handler** kết thúc và return response, nó sẽ sẵn sàng thực hiện những events khác.
 
-**VPC interface endpoint** được gắn với subnet nên cách làm này không những với **private subnet** mà còn có thể làm với **public subnet**, nghĩa là với **public subnet**, bạn hoàn toàn có thể không cho **TCP 443** đi ra ngoài internet.
+Ví dụ về cấu trúc của Lambda function:
 
-### Nội dung:
+```
+exports.handler = async (event) => {
+    // TODO implement
+    const response = {
+        statusCode: 200,
+        body: JSON.stringify('Hello from Lambda!'),
+    };
+    return response;
+};
 
-- [Kích hoạt DNS hostnames](./3.2.1-enablevpcdns/)
-- [Tạo VPC Endpoint](./3.2.2-createvpcendpoint/)
-- [Kết nối Private Instance](./3.3.3-connectec2/)
+```
+
+Ở đây, **event** là request được gửi đến và **response** là kết quả trả về.
+
+#### Tạo Lambda function
+
+Truy cập đến đường dẫn **sam/src/handlers/createTask** và chọn file tên là **app.js**, coppy và paste đoạn code sau vào file:
+
+```
+const { DynamoDBClient } = require('@aws-sdk/client-dynamodb')
+const { DynamoDBDocumentClient, PutCommand } = require('@aws-sdk/lib-dynamodb')
+const uuid = require('uuid')
+
+const ddbClient = new DynamoDBClient()
+const ddbDocClient = DynamoDBDocumentClient.from(ddbClient)
+const tableName = process.env.TASKS_TABLE
+
+exports.handler = async (event) => {
+  console.info('received:', event)
+
+  const body = JSON.parse(event.body)
+  const user = event.requestContext.authorizer.principalId
+  const id = uuid.v4()
+  const title = body.title
+  const bodyText = body.body
+  const createdAt = new Date().toISOString()
+
+  let dueDate = createdAt
+
+  if ('dueDate' in body) {
+    dueDate = body.dueDate
+  }
+
+  const params = {
+    TableName: tableName,
+    Item: { user: `user#${user}`, id: `task#${id}`, title: title, body: bodyText, dueDate: dueDate, createdAt: createdAt }
+  }
+
+  console.info(`Writing data to table ${tableName}`)
+  const data = await ddbDocClient.send(new PutCommand(params))
+  console.log('Success - item added or updated', data)
+
+  const response = {
+    statusCode: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    },
+    body: JSON.stringify(data)
+  }
+  return response
+}
+
+```
+
+Đoạn code này đã import thư viện **AWS SDK** cho DynamoDB, thư viện **uuid** cho việc nhận dạng, cài đặt DynamoDB client.
+
+Lambda function được khởi tạo với `exports.handler`, nó đóng vai trò như một **entry point** của function. Nó lấy object **envent** làm tham số đầu vào và trả về một object **response.**
+
+Nó tạo ra object **params** với những yếu tố cần thiết, bao gồm tên của DynamoDB table, thuộc tính của item trong table **(user, id, title, bodyText, dueDate, createdAt).**
+
+Function ghi lại dữ liệu vào DynamoDB table bằng **PutCommand** và logs ra lời nhắn thành công.
+
+Response sẽ trả về một object với **statusCode** là 200, đặt headers với CORS và **body** là dữ liệu được ghi lại.
+
+Tóm lại, Đoạn code này phục vụ cho việc tạo và cập nhật task trong DynamoDB table dựa vào việc gửi request API. Nó tận dụng AWS SDK dành cho DynamoDB, Node.js và AWS Lambda để cung cấp giải pháp quản lý tác vụ của serverless và mở rộng quy mô.
+
+#### Thêm Lambda function vào SAM template
+
+Coppy và paste đoạn code dưới đây vào mục Resource trong file **template.yml,** sau function **TasksTable.**
+
+{{% notice warning %}}
+Cú pháp trong YAML có phân biệt khoảng trắng, vì vậy hãy chắc chắn rằng phạm vi của function **CreateTaskFunction** được thụt lề vào sâu hơn so với phạm vi của **Resources.**
+{{% /notice %}}
+
+Giá trị `AWS::Serverless::Function` được dùng để khởi tạo Lambda function. Thuộc tính **CodeUri** được dùng để xác định rõ vị trí của file **app.js** trong thư mục `src/handlers/createTask`.
+
+```
+# CreateTask Lambda Function
+  CreateTaskFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/handlers/createTask
+      Handler: app.handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref TasksTable
+      Environment:
+        Variables:
+          TASKS_TABLE: !Ref TasksTable
+      Events:
+        PostTaskFunctionApi:
+          Type: Api
+          Properties:
+            RestApiId: !Ref TasksApi
+            Path: /tasks
+            Method: POST
+            Auth:
+              Authorizer: MyLambdaTokenAuthorizer
+
+```
+
+Chi tiết và công dụng của các thuộc tính được khai báo ở trên các bạn có thể xem lại ở phần [này](/vi/3-serverlessbackend/).

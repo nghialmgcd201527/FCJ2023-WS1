@@ -116,3 +116,50 @@ const generatePolicy = function (principalId, effect, resource) {
 }
 
 ```
+
+Đoạn code phía trên sẽ xác minh và xác thực những request được gửi đến API bằng cách sử dụng JSON Web Token (JWT) và trả về một IAM policy cho người được xác thực đó.
+
+Bắt đầu, chúng ta sẽ import thư viện **njwt**, nó được dùng cho xác thực JWT.
+
+**exports.handler** là entry point của Lambda function. Nó sẽ nhận vào một event, một context và một callback. Event chứa các thông tin về request gửi đến API. Context chứa các thông tin về Lambda function. Callback sẽ được gọi khi Lambda function hoàn thành.
+
+JWT token được trích xuất từ authorizationToken trong phần header của request. Sẽ có một phương thức phân tách được sử dùng để xóa tiền tố **Bearer** và truy xuất mã token thực sự.
+
+Hàm `jwt.verify` được sử dụng để xác minh token bằng cách sử dụng **secretphrase**. Nếu token không hợp lệ, Lambda function sẽ trả về một lỗi. Nếu token hợp lệ, object JWT được xác thực đó sẽ được lấy đi và xử lí.
+
+Biến **resource** được đặt để đại diện cho những resource được yêu cầu từ API request.
+
+Hàm `generatePolicy` được sử dụng để tạo ra một IAM policy. Nó sẽ lấy giá trị của **sub (subject)** từ body của JWT, chuyển **effect** thành **Allow** và sử dụng biến **resource** để làm rõ policy đó.
+
+Tóm lại, đoạn code ở trên là một phương thức xác thực đơn giản dựa vào token, nó dùng để mô tả cách sử dụng token để xác thực request. Token được truyền bằng header của **Authorization.** Sau đó chúng ta sẽ xác minh token bằng cách sử dụng (secretphrase). Đó là một passphrase rất phổ biến, được áp dụng trong ứng dụng web. Chúng ta chỉ đơn giản là mock identity provider. Trong thực tế, chúng ta sẽ sử dụng một identity provider uy tín, chẳng hạn như Amazon Cognito, để xác minh danh tính của người dùng.
+
+#### IAM Policy Document
+
+Đây là ví dụ về IAM policy document được trả về tới người gọi. Ở đây, principal **minhnghia** được cấp quyền truy cập đến các method của API Gateway.
+
+```
+{
+    "principalId": "minhnghia",
+    "policyDocument": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Action": "execute-api:Invoke",
+                "Effect": "Allow",
+                "Resource": "arn:aws:execute-api:us-east-1:0123456789012:dn3fidb5ng0/v1/*"
+            }
+        ]
+    },
+    "context": {
+        "userId": 1,
+        "createdAt": "2021-10-01T19:53:34.594Z"
+    }
+}
+
+```
+
+**principalId** đại diện cho indentify của người dùng được gán với request. Trong đoạn code này, nó được gán giá trị **minhnghia**, IAM policy này được gán với người dùng này cùng identifier là **minhnghia**.
+
+object **policyDocument** xác định quyền được gán trong policy. **Version** là phiên bản của ngôn ngữ viết policy đang được sử dụng hiện tại là `2012-10-17`. **Statement** là một mảng các quyền được gán cho người dùng. Trong đoạn code này, nó chỉ có một quyền duy nhất là **execute-api:Invoke**. **Effect** là một trong hai giá trị **Allow** hoặc **Deny**. **Resource** là một định danh duy nhất cho một resource cụ thể. Trong đoạn code này, nó là một định danh cho một API Gateway endpoint.
+
+**context** là một object chứa các thông tin bổ sung về người dùng. Nó có thể được sử dụng để truyền các thông tin bổ sung về người dùng đến Lambda function. Trong đoạn code này, nó chứa hai thông tin là **userId** và **createdAt**. Cái này có lợi trong việc debugging và kiểm tra các request của người dùng đó.

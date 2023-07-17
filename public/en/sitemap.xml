@@ -87,18 +87,6 @@
                 href="/2-prerequiste/2.4-installamplifycli/"
                 />
   </url><url>
-    <loc>/4-s3log/4.1-updateiamrole/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-s3log/4.1-updateiamrole/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-s3log/4.1-updateiamrole/"
-                />
-  </url><url>
     <loc>/3-serverlessbackend/3.2-lambdafunction/</loc>
     <xhtml:link
                 rel="alternate"
@@ -109,18 +97,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/3-serverlessbackend/3.2-lambdafunction/"
-                />
-  </url><url>
-    <loc>/4-s3log/4.2-creates3bucket/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-s3log/4.2-creates3bucket/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-s3log/4.2-creates3bucket/"
                 />
   </url><url>
     <loc>/2-prerequiste/</loc>
@@ -147,40 +123,16 @@
                 href="/3-serverlessbackend/"
                 />
   </url><url>
-    <loc>/4-s3log/4.3-creategwes3/</loc>
+    <loc>/4-apigateway/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-s3log/4.3-creategwes3/"
+                href="/vi/4-apigateway/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-s3log/4.3-creategwes3/"
-                />
-  </url><url>
-    <loc>/4-s3log/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-s3log/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-s3log/"
-                />
-  </url><url>
-    <loc>/4-s3log/4.4-configsessionlogs/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-s3log/4.4-configsessionlogs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-s3log/4.4-configsessionlogs/"
+                href="/4-apigateway/"
                 />
   </url><url>
     <loc>/5-portfwd/</loc>

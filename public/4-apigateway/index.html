@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Clean up resources :: AWS System Manager</title>
+    <title>Manage session logs :: AWS System Manager</title>
 
     
     <link href="/css/nucleus.css?1689611272" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/6-cleanup/">
+  <body class="" data-url="/4-apigateway/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -354,7 +354,7 @@
     
     <li data-nav-id="/4-apigateway/" title="Manage session logs" class="dd-item 
         
-        
+        active
         
         ">
       <a href="/4-apigateway/">
@@ -406,7 +406,7 @@
     
     <li data-nav-id="/6-cleanup/" title="Clean up resources" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/6-cleanup/">
@@ -457,7 +457,7 @@
                   
                     
                     
-                      <option id="en" value="/6-cleanup/" selected>English</option>
+                      <option id="en" value="/4-apigateway/" selected>English</option>
                     
                   
               
@@ -471,7 +471,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/6-cleanup/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/4-apigateway/">Tiếng Việt</option>
                     
                   
               
@@ -559,7 +559,7 @@
             
           
           
-            <a href='/'>Session Management</a> > Clean up resources
+            <a href='/'>Session Management</a> > Manage session logs
           
         
           
@@ -574,7 +574,7 @@
   <ul>
     <li>
       <ul>
-        <li></li>
+        <li><a href="#content">Content:</a></li>
       </ul>
     </li>
   </ul>
@@ -594,7 +594,7 @@
           
             <h1>
               
-              Clean up resources
+              Manage session logs
             </h1>
           
 
@@ -602,109 +602,17 @@
 
 
 
-	<p>We will take the following steps to delete the resources we created in this exercise.</p>
-<h4 id="delete-ec2-instance">Delete EC2 instance</h4>
-<ol>
-<li>
-<p>Go to <a href="https://console.aws.amazon.com/ec2/v2/home">EC2 service management console</a></p>
+	<p>With Session Manager, we can view the history of connections to instances through <strong>Session history</strong>. However, we have not seen the details of the commands used in a session.</p>
+<p><img src="/images/4.s3/001-s3.png" alt="S3"></p>
+<p>In this section, we will proceed to create an S3 bucket and configure the session logs feature to see the details of the commands used in the session.</p>
+<p><img src="/images/arc-log.png" alt="port-fwd"></p>
+<h3 id="content">Content:</h3>
 <ul>
-<li>Click <strong>Instances</strong>.</li>
-<li>Select both <strong>Public Linux Instance</strong> and <strong>Private Windows Instance</strong> instances.</li>
-<li>Click <strong>Instance state</strong>.</li>
-<li>Click <strong>Terminate instance</strong>, then click <strong>Terminate</strong> to confirm.</li>
+<li><a href="./4.1-updateiamrole/">Update IAM Role</a></li>
+<li><a href="./4.2-creates3bucket/">Create <strong>S3 Bucket</strong></a></li>
+<li><a href="./4.3-creategwes3">Create S3 Gateway endpoint</a></li>
+<li><a href="./4.4-configsessionlogs/">Configure <strong>Session logs</strong></a></li>
 </ul>
-</li>
-<li>
-<p>Go to <a href="https://console.aws.amazon.com/iamv2/home#/home">IAM service management console</a></p>
-<ul>
-<li>Click <strong>Roles</strong>.</li>
-<li>In the search box, enter <strong>SSM</strong>.</li>
-<li>Click to select <strong>SSM-Role</strong>.</li>
-<li>Click <strong>Delete</strong>, then enter the role name <strong>SSM-Role</strong> and click <strong>Delete</strong> to delete the role.</li>
-</ul>
-</li>
-</ol>
-<p><img src="/images/6.clean/001-clean.png" alt="Clean"></p>
-<ol start="3">
-<li>Click <strong>Users</strong>.
-<ul>
-<li>Click on user <strong>Portfwd</strong>.</li>
-<li>Click <strong>Delete</strong>, then enter the user name <strong>Portfwd</strong> and click <strong>Delete</strong> to delete the user.</li>
-</ul>
-</li>
-</ol>
-<h4 id="delete-s3-bucket">Delete S3 bucket</h4>
-<ol>
-<li>
-<p>Access <a href="https://console.aws.amazon.com/systems-manager/session-manager">System Manager - Session Manager service management console</a>.</p>
-<ul>
-<li>Click the <strong>Preferences</strong> tab.</li>
-<li>Click <strong>Edit</strong>.</li>
-<li>Scroll down.</li>
-<li>In the section <strong>S3 logging</strong>.</li>
-<li>Uncheck <strong>Enable</strong> to disable logging.</li>
-<li>Scroll down.</li>
-<li>Click <strong>Save</strong>.</li>
-</ul>
-</li>
-<li>
-<p>Go to <a href="https://s3.console.aws.amazon.com/s3/home">S3 service management console</a></p>
-<ul>
-<li>Click on the S3 bucket we created for this lab. (Example: lab-fcj-bucket-0001 )</li>
-<li>Click <strong>Empty</strong>.</li>
-<li>Enter <strong>permanently delete</strong>, then click <strong>Empty</strong> to proceed to delete the object in the bucket.</li>
-<li>Click <strong>Exit</strong>.</li>
-</ul>
-</li>
-<li>
-<p>After deleting all objects in the bucket, click <strong>Delete</strong></p>
-</li>
-</ol>
-<p><img src="/images/6.clean/002-clean.png" alt="Clean"></p>
-<ol start="4">
-<li>Enter the name of the S3 bucket, then click <strong>Delete bucket</strong> to proceed with deleting the S3 bucket.</li>
-</ol>
-<p><img src="/images/6.clean/003-clean.png" alt="Clean"></p>
-<h4 id="delete-vpc-endpoints">Delete VPC Endpoints</h4>
-<ol>
-<li>Go to <a href="https://console.aws.amazon.com/vpc/home">VPC service management console</a>
-<ul>
-<li>Click <strong>Endpoints</strong>.</li>
-<li>Select the 4 endpoints we created for the lab including <strong>SSM</strong>, <strong>SSMMESSAGES</strong>, <strong>EC2MESSAGES</strong>, <strong>S3GW</strong>.</li>
-<li>Click <strong>Actions</strong>.</li>
-<li>Click <strong>Delete VPC endpoints</strong>.</li>
-</ul>
-</li>
-</ol>
-<p><img src="/images/6.clean/004-clean.png" alt="Clean"></p>
-<ol start="2">
-<li>
-<p>In the confirm box, enter <strong>delete</strong>.</p>
-<ul>
-<li>Click <strong>Delete</strong> to proceed with deleting endpoints.</li>
-</ul>
-</li>
-<li>
-<p>Click the refresh icon, check that all endpoints have been deleted before proceeding to the next step.</p>
-</li>
-</ol>
-<p><img src="/images/6.clean/005-clean.png" alt="Clean"></p>
-<h4 id="delete-vpc">Delete VPC</h4>
-<ol>
-<li>
-<p>Go to <a href="https://console.aws.amazon.com/vpc/home">VPC service management console</a></p>
-<ul>
-<li>Click <strong>Your VPCs</strong>.</li>
-<li>Click on <strong>Lab VPC</strong>.</li>
-<li>Click <strong>Actions</strong>.</li>
-<li>Click <strong>Delete VPC</strong>.</li>
-</ul>
-</li>
-<li>
-<p>In the confirm box, enter <strong>delete</strong> to confirm, click <strong>Delete</strong> to delete <strong>Lab VPC</strong> and related resources.</p>
-</li>
-</ol>
-<p><img src="/images/6.clean/006-clean.png" alt="Clean"></p>
 
 
 
@@ -896,6 +804,26 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -923,23 +851,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
         
@@ -949,10 +860,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/5-portfwd/" title="Port Forwarding"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/3-serverlessbackend/3.2-lambdafunction/" title="Connect to Private instance"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/1-introduce/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/5-portfwd/" title="Port Forwarding" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

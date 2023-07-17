@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tạo kết nối đến máy chủ EC2 :: AWS System Manager</title>
+    <title>Xây dựng một serverless backend với AWS Lambda và AWS SAM :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1689557822" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1689557822" rel="stylesheet">
-    <link href="/css/hybrid.css?1689557822" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1689557822" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1689557822" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689557822" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1689557822" rel="stylesheet">
-    <link href="/css/theme.css?1689557822" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1689557822" rel="stylesheet">
+    <link href="/css/nucleus.css?1689611272" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1689611272" rel="stylesheet">
+    <link href="/css/hybrid.css?1689611272" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1689611272" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1689611272" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689611272" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1689611272" rel="stylesheet">
+    <link href="/css/theme.css?1689611272" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1689611272" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1689557822" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1689611272" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1689557822"></script>
+    <script src="/js/jquery-3.3.1.min.js?1689611272"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1689557822"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1689557822"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1689611272"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1689611272"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1689557822"></script>
+<script type="text/javascript" src="/js/search.js?1689611272"></script>
 
     
   </div>
@@ -258,13 +258,13 @@
  
   
     
-    <li data-nav-id="/vi/3-serverlessbackend/" title="Tạo kết nối đến máy chủ EC2" class="dd-item 
+    <li data-nav-id="/vi/3-serverlessbackend/" title="Xây dựng một serverless backend với AWS Lambda và AWS SAM" class="dd-item 
         
         active
         
         ">
       <a href="/vi/3-serverlessbackend/">
-           <b> 3. </b> Tạo kết nối đến máy chủ EC2
+           <b> 3. </b> Xây dựng một serverless backend với AWS Lambda và AWS SAM
           
             <i class="fas fa-check read-icon"></i>
           
@@ -289,13 +289,13 @@
  
   
     
-    <li data-nav-id="/vi/3-serverlessbackend/3.1-dynamodb/" title="Kết nối đến máy chủ Public" class="dd-item 
+    <li data-nav-id="/vi/3-serverlessbackend/3.1-dynamodb/" title="Khai báo Table trong DynamoDB" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-serverlessbackend/3.1-dynamodb/">
-           <b> 3.1. </b> Kết nối đến máy chủ Public
+           <b> 3.1. </b> Khai báo Table trong DynamoDB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -317,13 +317,13 @@
  
   
     
-    <li data-nav-id="/vi/3-serverlessbackend/3.2-lambdafunction/" title="Tạo kết nối đến máy chủ EC2 Private" class="dd-item 
+    <li data-nav-id="/vi/3-serverlessbackend/3.2-lambdafunction/" title="Tạo Lambda function" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-serverlessbackend/3.2-lambdafunction/">
-           <b> 3.2. </b> Tạo kết nối đến máy chủ EC2 Private
+           <b> 3.2. </b> Tạo Lambda function
           
             <i class="fas fa-check read-icon"></i>
           
@@ -352,142 +352,18 @@
  
   
     
-    <li data-nav-id="/vi/4-s3log/" title="Quản lý session logs" class="dd-item 
+    <li data-nav-id="/vi/4-apigateway/" title="Cấu hình cho API authorization: API Gateway" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-s3log/">
-           <b> 4. </b> Quản lý session logs
+      <a href="/vi/4-apigateway/">
+           <b> 4. </b> Cấu hình cho API authorization: API Gateway
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.1-updateiamrole/" title="Cập nhật IAM Role" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.1-updateiamrole/">
-           <b> 4.1 </b> Cập nhật IAM Role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.2-creates3bucket/" title="Tạo S3 Bucket" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.2-creates3bucket/">
-           <b> 4.2 </b> Tạo S3 Bucket
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.3-creategwes3/" title="Tạo S3 Gateway endpoint" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.3-creategwes3/">
-           <b> 4.3 </b> Tạo S3 Gateway endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.4-configsessionlogs/" title="Theo dõi session logs" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.4-configsessionlogs/">
-           <b> 4.4 </b> Theo dõi session logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -683,7 +559,7 @@
             
           
           
-            <a href='/vi/'>Session Management</a> > Tạo kết nối đến máy chủ EC2
+            <a href='/vi/'>Session Management</a> > Xây dựng một serverless backend với AWS Lambda và AWS SAM
           
         
           
@@ -698,6 +574,7 @@
   <ul>
     <li>
       <ul>
+        <li></li>
         <li><a href="#nôi-dung">Nội dung</a></li>
       </ul>
     </li>
@@ -718,7 +595,7 @@
           
             <h1>
               
-              Tạo kết nối đến máy chủ EC2
+              Xây dựng một serverless backend với AWS Lambda và AWS SAM
             </h1>
           
 
@@ -726,10 +603,39 @@
 
 
 
-	<p>Trong bước này, chúng ta sẽ thực hiện tạo kết nối đến các máy chủ EC2 của chúng ta, nằm trong cả public và private subnet.</p>
+	<h4 id="tổng-quan">Tổng quan</h4>
+<p>Trong phần này, chúng ta sẽ sử dụng Serverless Application Model (SAM) để xây dựng một quy trình backend để xử lí các yêu cầu từ ứng dụng web. Ứng dụng mà tới đây chúng ta sẽ triển khai cho phép người dùng tạo ra những todo tasks và gán file vào các task đó. Để đáp ứng được những yêu cầu đó, JavaScript đang chạy trên trình duyệt cần nhờ vào một dịch vụ trên cloud.</p>
+<p>Bạn sẽ dùng Lambda function để mỗi lần user tạo một task, nó sẽ được gọi thực thi. Funtion này sẽ lưu trữ task vào DynamoDB, sau đó sẽ gửi phản hồi đến phần front-end và cập nhật task mới trên giao diện người dùng.</p>
+<p>Function được gọi từ trình duyệt bằng Amazon API Gateway. Bạn sẽ triển khai sự kết nối này ở phần sau. Trong phần này, bạn sẽ chỉ kiểm tra function của bạn ở phạm vi cô lập.</p>
+<h4 id="sam-là-gì">SAM là gì?</h4>
+<p><a href="https://aws.amazon.com/serverless/sam/">Serverless Application Model (SAM)</a> là một open-source framework nó sẽ giúp việc triển khai serverless application trở nên dễ dàng hơn. Nó cung cấp một cách đơn giản để định nghĩa các serverless application, và cung cấp một tập các công cụ để triển khai các ứng dụng đó.</p>
+<p>Nó cho phép chúng ta xác định rõ những yêu cầu của ứng dụng bằng code. SAM chuyển đổi và mở rộng SAM syntax lên AWS Cloudformation để triển khai ứng dụng của bạn. Bạn sẽ thấy và sử dụng SAM templates throughout this workshop.</p>
+<h4 id="sam-hoạt-động-như-thế-nào">SAM hoạt động như thế nào?</h4>
+<p>AWS SAM dựa trên AWS Cloudformation. Một ứng dụng serverless được định nghĩa bằng một CloudFormation template và được triển khai với CloudFormation stack. Tóm lại, AWS SAM template là CloudFormation template.</p>
+<p>AWS SAM xác định một tập hợp tài nguyên mô tả các components chung của ứng dụng serverless. Để AWS SAM có những objects được định nghĩa trong CloudFormation template thì template đó phải gồm phần Transform trong document root là <code>AWS::Serverless-2016-10-31</code>.</p>
+<h4 id="trong-ứng-dụng-của-chúng-ta-tasks-api">Trong ứng dụng của chúng ta: Tasks API</h4>
+<p>Tasks API mà chúng ta sẽ xây dựng trong workshop này bao gồm Amazon API Gateway HTTP endpoints để trigger AWS Lambda functions, nó sẽ đọc và ghi dữ liệu đến cơ sở dữ liệu Amazon DynamoDB. SAM template của Tasks API sẽ gồm một bảng DynamoDB, Lambda functions để liệt kê, xem và cập nhật Tasks trong bảng.</p>
+<p>Trong phần này, bạn sẽ làm việc với Lambda function để tạo một task mới. Các thành phần của Tasks API sẽ được định nghĩa trong <code>template.yaml</code>. Tiếp theo chúng ta sẽ đi vào chi tiết cấu trúc của Lambda function.</p>
+<h4 id="phân-tích-sam-template">Phân tích SAM template</h4>
+<p>Vào thư mục <strong>serverless-tasks-web</strong> tiếp đến là thư mục <strong>sam</strong> sau đó mở file <strong>template.yaml</strong>. Bên dưới là một đoạn code trong file SAM template dùng để liệt kê danh sách các tasks:</p>
+<p><img src="/images/3.serverlessbackend/3-1.png" alt="VPC"></p>
+<p>Đây là properties được định nghĩa trong resource <code>AWS:Serverless:Function</code>, chúng ta sẽ bắt đầu tìm hiểu chúng.</p>
+<p><strong>FunctionName</strong><br>
+Thuộc tính <strong>FunctionName</strong> được đặt tên tùy ý cho Lambda function. Nếu chúng ta không đặt tên cho nó, CloudFormation sẽ sử dụng tên của CloudFormation Stack, CloudFormation Resource và random ID.</p>
+<p><strong>CodeUri</strong><br>
+Thuộc tính <strong>CodeUri</strong> chỉ định đường dẫn đến mã nguồn của Lambda function trong workspace liên kết với SAM template trong đường dẫn <code>sam/</code>. Trong ví dụ này, Đoạn code sẽ nằm ở đường dẫn <code>src/handlers/</code> và <code>getTasks</code> sẽ là function của nó.</p>
+<p><strong>Handler</strong><br>
+Thuộc tính <strong>Handler</strong> chỉ định entry point cho Lambda function. Đối với Javascript, nó sẽ được format dưới dạng <strong>file.function</strong>, trong đó file là tên file chứa function ko có đuôi là <strong>.js</strong> thuộc đường dẫn <strong>CodeUri</strong> được định nghĩa phía trên và <strong>function</strong> là tên của function trong file đó sẽ được thực thi khi Lambda function được gọi.</p>
+<p><strong>Environment</strong><br>
+Thuộc tính <strong>Environment</strong> định nghĩa biến môi trường, nó sẽ có sẵn trong Lambda function. Trong ví dụ này, chúng ta đang định nghĩa một biến môi trường <strong>TASKS_TABLE</strong> với giá trị là <strong>TasksTable</strong>. Biến môi trường này sẽ được sử dụng trong Lambda function để truy cập vào DynamoDB table nơi lưu trữ các tasks.</p>
+<p><strong>Events</strong><br>
+Thuộc tính <strong>Events</strong> định nghĩa các events sẽ trigger Lambda function khi được gọi. <a href="https://github.com/aws/serverless-application-model/blob/master/versions/2016-10-31.md#api">Event API</a> được tích hợp với Lambda function cùng API Gateway endpoint, tuy nhiên SAM chỉ hỗ trợ Lambda function triggers từ <a href="https://github.com/aws/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-types">những nguồn sau</a>.</p>
+<p><strong>API event</strong> được dùng để xem chi tiết của một Task được định nghĩa ở resource RESTful <code>/tasks</code> và được truy cập khi sử dụng phương pháp HTTP GET. SAM sẽ chuyển đổi API event đến API Gateways để gọi Lambda function.</p>
 <h3 id="nôi-dung">Nội dung</h3>
-<p>3.1. <a href="3.1-public-instance/">Tạo Kết nối đến máy chủ EC2 Public</a> <br>
-3.2. <a href="3.2-private-instance/">Tạo Kết nối đến máy chủ EC2 Private</a></p>
+<ul>
+<li><a href="3.1-dynamodb/">Khai báo Table trong DynamoDB</a></li>
+<li><a href="3.2-lambdafunction/">Tạo Lambda function</a></li>
+</ul>
 
 
 
@@ -930,74 +836,8 @@
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1046,7 +886,7 @@
 			<a class="nav nav-prev" href="/vi/2-prerequiste/2.4-installamplifycli/" title="Cài đặt Amplify CLI"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/3-serverlessbackend/3.1-dynamodb/" title="Kết nối đến máy chủ Public" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/3-serverlessbackend/3.1-dynamodb/" title="Khai báo Table trong DynamoDB" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1056,19 +896,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1689557822"></script>
-    <script src="/js/perfect-scrollbar.min.js?1689557822"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1689557822"></script>
-    <script src="/js/jquery.sticky.js?1689557822"></script>
-    <script src="/js/featherlight.min.js?1689557822"></script>
-    <script src="/js/highlight.pack.js?1689557822"></script>
+    <script src="/js/clipboard.min.js?1689611272"></script>
+    <script src="/js/perfect-scrollbar.min.js?1689611272"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1689611272"></script>
+    <script src="/js/jquery.sticky.js?1689611272"></script>
+    <script src="/js/featherlight.min.js?1689611272"></script>
+    <script src="/js/highlight.pack.js?1689611272"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1689557822"></script>
-    <script src="/js/learn.js?1689557822"></script>
-    <script src="/js/hugo-learn.js?1689557822"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1689611272"></script>
+    <script src="/js/learn.js?1689611272"></script>
+    <script src="/js/hugo-learn.js?1689611272"></script>
 
-    <link href="/mermaid/mermaid.css?1689557822" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1689557822"></script>
+    <link href="/mermaid/mermaid.css?1689611272" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1689611272"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

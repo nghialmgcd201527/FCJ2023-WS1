@@ -21,18 +21,11 @@
 	"content": "Mô hình kiến trúc của ứng dụng Todo app sử dụng AWS Lamba, Amazon API Gateway, Amazon DynamoDB, Amazon Simple Storage Service (S3) và AWS Amplify Console. Amplify Console được dùng để phục vụ cho việc triển khai liên tục (Continuos Deployment - CD) và quản lí tài nguyên cho một trang web tĩnh bao gồm HTML, CSS, JavaScript và file ảnh được tải lên từ người dùng trên trình duyệt. Trong đó, JavaScript thực thi việc gửi và nhận dữ liệu từ một public backend API được xây dựng bởi Lambda và API Gateway. DynamoDB cung cấp persistence layer nơi mà dữ liệu được lưu trữ bằng Lambda function từ API. S3 được sử dụng để lưu trữ các file image được tải lên. Và cuối cùng là Amazon Rekognition, được dùng để nhận diện những thuộc tính và gắn các thuộc tính đó vào những file image trên.\n"
 },
 {
-	"uri": "/vi/3-accessibilitytoinstances/3.1-public-instance/",
+	"uri": "/vi/3-serverlessbackend/3.1-dynamodb/",
 	"title": "Kết nối đến máy chủ Public",
 	"tags": [],
 	"description": "",
 	"content": "\nTruy cập vào giao diện quản trị của dịch vụ EC2. Click chọn Public Linux Instance. Click Actions. Click Security. Click Modify IAM role. Tại trang Modify IAM role. Click chọn SSM-Role. Click Save. Bạn sẽ cần chờ khoảng 10 phút trước khi thực hiện bước tiếp theo. Thời gian này EC2 instance của chúng ta sẽ tự động đăng ký với Session Manager.\nTruy cập vào giao diện quản trị của dịch vụ AWS Systems Manager Kéo thanh trượt menu bên trái xuống dưới. Click Session Manager. Click Start Session. Sau đó chọn Public Linux Instance và click Start session để truy cập vào instance. Terminal sẽ xuất hiện trên trình duyệt. Kiểm tra với câu lệnh sudo tcpdump -nn port 22 và sudo tcpdump chúng ta sẽ thấy không có traffic của SSH mà chỉ có traffic HTTPS. Ở trên, chúng ta đã tạo kết nối vào public instance mà không cần mở cổng SSH 22, giúp cho việc bảo mật tốt hơn, tránh mọi sự tấn công tới cổng SSH.\nMột nhược điểm của cách làm trên là ta phải mở Security Group outbound ở cổng 443 ra ngoài internet. Vì là public instance nên có thể sẽ không vấn đề gì nhưng nếu bạn muốn bảo mật hơn nữa, bạn có thể khoá cổng 443 ra ngoài internet mà vẫn sử dụng được Session Manager. Chúng ta sẽ đi qua cách làm này ở phần private instance dưới đây.\nBạn có thể terminate để kết thúc session đang kết nối trước khi qua bước tiếp theo.\n"
-},
-{
-	"uri": "/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/",
-	"title": "Kích hoạt DNS hostnames",
-	"tags": [],
-	"description": "",
-	"content": "Kích hoạt tính năng DNS hostnames trên VPC. Để tạo được VPC Endpoint chúng ta sẽ cần bật tính năng DNS hostnames trên VPC. Truy cập đến giao diện quản trị của dịch vụ VPC\nClick Your VPCs.\nChọn Lab VPC.\nClick Actions.\nClick Edit DNS hostnames.\nClick Endpoint, sau đó click Create Endpoint.\nTại trang Edit DNS hostnames. Click chọn Enable. Click Save changes. "
 },
 {
 	"uri": "/vi/2-prerequiste/2.1-createcloud9workspace/",
@@ -40,13 +33,6 @@
 	"tags": [],
 	"description": "",
 	"content": "Khởi tạo Cloud9 Nhập Cloud9 ở thanh tìm kiếm service trên AWS Console sau đó chọn Cloud9. Chọn Create environment Đặt tên cho Cloud9 Workspace là serverless-workshop. Ở mục Description hãy nhập mục đích bạn muốn sử dụng trong workspace này. Nhập deploy \u0026ldquo;Todos app\u0026rdquo; Environment type, ở đây chúng ta sẽ tạo một server để chạy Cloud9 workspace này. Mình sẽ chọn option New EC2 instance để tạo một server mới. Sang phần setting cho New EC2 instance, chọn Additional instance types sau đó chúng ta chọn loại t3.medium. Giữ nguyên mặc định cho những thiết lập khác. Click Create và đợi khoảng 10 phút để Cloud9 Workspace được tạo. Khi Cloud9 Workspace được tạo xong, chúng ta sẽ có một môi trường để làm việc với AWS CLI và các công cụ khác.\nTrong danh sách các Environments được tạo ra, hãy tìm environment serverless-workshop và click vào nút Open để mở môi trường Cloud9. Sau khi môi trường mở ra, chúng ta hãy tắt những phần bên dưới đã được khởi tạo lúc bắt đầu và tạo một trang terminal mới. Workspace của chúng ta sẽ trông như thế này.\n"
-},
-{
-	"uri": "/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/",
-	"title": "Tạo Endpoint ssm",
-	"tags": [],
-	"description": "",
-	"content": "Tạo VPC Endpoint SSM Truy cập đến giao diện quản trị của dịch vụ VPC Click Endpoints. Click Create endpoint. Tại trang Create endpoint. Tại mục Name tag điền SSM. Tại mục Service Category chọn AWS Services. Tại mục Service Name, Tại mục Service category chọn: AWS services Tại mục Service Name nhập: SSM sau đó chọn Service Name: com.amazonaws.ap-southeast-1.ssm. Tại cột Service Name, click chọn com.amazonaws.ap-southeast-1.ssm. Tại mục VPC, chọn Lab VPC. Chọn AZ đầu tiên, sau đó chọn subnet Lab Private Subnet. Kéo chuột xuống dưới. Tại mục Security Group, chọn Security group SG VPC Endpoint mà chúng ta đã tạo trước đó. Tại mục Policy, chọn Full access Kéo chuột xuống dưới cùng. Click Create endpoint. Chúng ta đã tạo xong VPC Interface Endpoint cho SSM. "
 },
 {
 	"uri": "/vi/2-prerequiste/",
@@ -63,14 +49,7 @@
 	"content": "Cloud9 đã cài đặt sẵn Node.js nhưng có thể nó sẽ không tương thích với thời điểm mình làm bài workshop này. Để đảm bảo được điều này, các bạn hãy cài đặt Node.js v16 (codename Gallium) bằng cách chạy lệnh sau trong terminal của Cloud9.\nChúng ta hãy kiểm tra phiên bản Node.js hiện tại đang chạy trên Cloud9 bằng lệnh sau:\nnode --version Đây là phiên bản Node.js mà mình đang sử dụng trong workshop này.\nNếu phiên bản Node.js mà bạn đang sử dụng là v16.x thì bạn có thể bỏ qua bước này và đến phần Clone Git repository. Nếu phiên bản mà bạn đang sử dụng khác phiên bản trên thì hãy theo dõi các bước sau để cài đặt phiên bản Node.js phù hợp với workshop này bằng trang terminal vừa tạo.\nỞ trang terminal trên Cloud9, hãy chạy lệnh sau để đảm bảo rằng bạn đã cài đặt phiên bản mới nhất của Node.js Version Manager (nvm) (ở thời điểm mình viết workshop, đang là version 0.39.0).\ncurl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash Tiếp theo chúng ta sẽ cài đặt Node.js v16 \u0026ldquo;Gallium\u0026rdquo;:\nnvm install \u0026#39;lts/gallium\u0026#39; Cuối cùng, chúng ta sẽ chọn phiên bản Node.js trên là phiên bản mặc định:\nnvm alias default \u0026#39;lts/gallium\u0026#39; Hãy xem lại phiên bản Node.js đang chạy trên Cloud9 bằng lệnh sau:\nnode --version Kết quả chúng ta cần là bắt đầu bằng v16.\n"
 },
 {
-	"uri": "/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/",
-	"title": "Tạo Endpoint ssmmessages",
-	"tags": [],
-	"description": "",
-	"content": "Tạo VPC Endpoint SSMMESSAGES Truy cập đến giao diện quản trị của dịch vụ VPC Click Endpoints. Click Create endpoint. Tại trang Create endpoint. Tại mục Name tag điền SSMMESSAGES. Tại mục Service Category chọn AWS Services. Tại mục Service Name, Tại mục Service category chọn: AWS services Tại mục Service Name nhập: ssmmessages sau đó chọn Service Name: com.amazonaws.ap-southeast-1.ssmmessages. Tại cột Service Name, click chọn com.amazonaws.ap-southeast-1.ssmmessages. Tại mục VPC, chọn Lab VPC. Chọn AZ đầu tiên, sau đó chọn subnet Lab Private Subnet. Kéo chuột xuống dưới. Tại mục Security Group, chọn Security group SG VPC Endpoint mà chúng ta đã tạo trước đó. Tại mục Policy, chọn Full access Kéo chuột xuống dưới cùng. Click Create endpoint. Chúng ta đã tạo xong VPC Interface Endpoint SSMMESSAGES. "
-},
-{
-	"uri": "/vi/3-accessibilitytoinstances/3.2-private-instance/",
+	"uri": "/vi/3-serverlessbackend/3.2-lambdafunction/",
 	"title": "Tạo kết nối đến máy chủ EC2 Private",
 	"tags": [],
 	"description": "",
@@ -84,35 +63,14 @@
 	"content": "Trong bước này, chúng ta sẽ tạo 1 S3 bucket để lưu trữ các session logs được gửi từ các EC2 instance.\nTạo S3 Bucket Truy cập giao diện quản trị dịch vụ S3 Click Create bucket. Tại trang Create bucket. Tại mục Bucket name điền tên bucket lab-yourname-bucket-0001 Tại mục Region chọn Region bạn đang làm lab hiện tại. Tên S3 bucket phải đảm bảo không trùng với toàn bộ S3 bucket khác trong hệ thống. Bạn có thể thay thế tên mình và điền số ngẫu nhiên khi tạo tên S3 bucket.\nKéo chuột xuống phía dưới và click Create bucket. Khi tạo S3 bucket chúng ta đã thực hiện Block all public access nên các EC2 instance của chúng ta sẽ không thể kết nối tới S3 thông qua mạng internet. Trong bước tiếp theo chúng ta sẽ cấu hình tính năng S3 Gateway Endpoint để cho phép các EC2 instance có thể kết nối tới S3 bucket thông qua mạng nội bộ của VPC.\n"
 },
 {
-	"uri": "/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/",
-	"title": "Tạo VPC Endpoint",
-	"tags": [],
-	"description": "",
-	"content": "Tạo VPC Endpoint SSM Chúng ta sẽ tạo 3 interface endpoint yêu cầu bởi Session Manager: Interface endpoint: com.amazonaws.region.ssm com.amazonaws.region.ec2messages com.amazonaws.region.ssmmessages Bạn có thể tham khảo thêm tại đây\nNội dung: Tạo Endpoint ssm Tạo Endpoint ssmmessages Tạo Endpoint ec2messages "
-},
-{
 	"uri": "/vi/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/",
-	"title": "Clone Git repository và tránh những vấn đề liên quan đến dung lượng trống của Cloud9",
+	"title": "Clone Git repository và vấn đề của dung lượng trống Cloud9",
 	"tags": [],
 	"description": "",
 	"content": "Ở trang terminal trên Cloud9, chạy command sau để để clone Git repository serverless-tasks-webapp:\ngit clone https://github.com/aws-samples/serverless-tasks-webapp Sau khi chạy câu lệnh trên, chúng ta sẽ được như hình. Chúng ta sẽ thấy thư mục serverless-tasks-webapp được tạo ra.\nTránh những vấn đề liên quan đến dung lượng trống của Cloud9 Mặc định, dung lượng trống của một Cloud9 instance chỉ tầm khoảng 2GB. Dùng đoạn script dưới đây để tránh tình trạng hết dung lượng và vấn đề trong suốt buổi workshop.\nĐầu tiên, chúng ta sẽ cập nhật phiên bản mới nhất của AWS CLI:\npip install --user --upgrade awscli aws-sam-cli Nếu cập nhật thành công, chúng ta sẽ thấy như hình bên dưới:\nChuyển đến thư mục serverless-tasks-webapp, kiểm tra dung lượng của volume hiện tại bằng lệnh sau:\ncd serverless-tasks-webapp\rdf -h Chúng ta sẽ nhận được kết quả như hình bên dưới:\nfilesystem ở đường dẫn /dev/nvme0n1p1 là volume mà chúng ta đang sử dụng. Chúng ta sẽ thấy dung lượng trống của volume này là 3.5G. Để tránh tình trạng hết dung lượng trong suốt buổi workshop, chúng ta sẽ tăng dung lượng của volume này lên 20G.\nTăng kích thước volume của Amazon EBS lên 20G:\nbash resize.sh 20 Chúng ta sẽ thay output như này:\nBây giờ hãy kiểm tra lại dung lượng của volume hiện tại bằng lệnh sau:\ndf -h Như chúng ta thấy ở đường dẫn /dev/nvme0n1p1, dung lượng trống của volume hiện tại đã tăng lên 14G.\n"
 },
 {
-	"uri": "/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/",
-	"title": "Kết nối EC2 Private",
-	"tags": [],
-	"description": "",
-	"content": "Gán IAM role và restart EC2 instance. Truy cập giao diện quản trị dịch vụ EC2 Click chọn Private Windows Instance. Click Actions. Click Security. Click Modify IAM Role. Tại trang Modify IAM Role. Tại mục IAM role, chọn SSM-Role. Click Save. Click chọn Private Windows Instance. Click Instance state. Click Reboot instance để thực hiện restart, sau đó click Reboot để xác nhận. Bạn hãy đợi 5 phút trước khi làm bước tiếp theo nhé.\nKết nối tới máy chủ private EC2 instance. Truy cập vào giao diện quản trị dịch vụ System Manager - Session Manager Click Start session. Click chọn Private Windows Instance. Click Start session. Gõ lệnh ipconfig để kiểm tra thông tin địa chỉ IP của Private Windows Instance như dưới đây. "
-},
-{
-	"uri": "/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/",
-	"title": "Tạo Endpoint ec2messages",
-	"tags": [],
-	"description": "",
-	"content": "Tạo VPC Endpoint EC2MESSAGES Truy cập đến giao diện quản trị của dịch vụ VPC Click Endpoints. Click Create endpoint. Tại trang Create endpoint. Tại mục Name tag điền SSMMESSAGES. Tại mục Service Category chọn AWS Services. Tại mục Service Name, Tại mục Service category chọn: AWS services Tại mục Service Name nhập: ec2 sau đó chọn Service Name: com.amazonaws.ap-southeast-1.ec2messages. Tại cột Service Name, click chọn com.amazonaws.ap-southeast-1.ec2messages. Tại mục VPC, chọn Lab VPC. Chọn AZ đầu tiên, sau đó chọn subnet Lab Private Subnet. Kéo chuột xuống dưới. Tại mục Security Group, chọn Security group SG VPC Endpoint mà chúng ta đã tạo trước đó. Tại mục Policy, chọn Full access Kéo chuột xuống dưới cùng. Click Create endpoint. Chúng ta đã tạo xong VPC Interface Endpoint EC2MESSAGES.\nĐảm bảo 3 endpoint cần thiết đã được tạo như hình dưới.\n"
-},
-{
-	"uri": "/vi/3-accessibilitytoinstances/",
+	"uri": "/vi/3-serverlessbackend/",
 	"title": "Tạo kết nối đến máy chủ EC2",
 	"tags": [],
 	"description": "",
@@ -130,7 +88,7 @@
 	"title": "Cài đặt Amplify CLI",
 	"tags": [],
 	"description": "",
-	"content": "Ở trang terminal trên Cloud9, chạy command sau để để clone Git repository serverless-tasks-webapp:\ngit clone https://github.com/aws-samples/serverless-tasks-webapp Sau khi chạy câu lệnh trên, chúng ta sẽ được như hình. Chúng ta sẽ thấy thư mục serverless-tasks-webapp được tạo ra.\nTránh những vấn đề liên quan đến dung lượng trống của Cloud9 Mặc định, dung lượng trống của một Cloud9 instance chỉ tầm khoảng 2GB. Dùng đoạn script dưới đây để tránh tình trạng hết dung lượng và vấn đề trong suốt buổi workshop.\nĐầu tiên, chúng ta sẽ cập nhật phiên bản mới nhất của AWS CLI:\npip install --user --upgrade awscli aws-sam-cli Nếu cập nhật thành công, chúng ta sẽ thấy như hình bên dưới:\nChuyển đến thư mục serverless-tasks-webapp, kiểm tra dung lượng của volume hiện tại bằng lệnh sau:\ncd serverless-tasks-webapp\rdf -h Chúng ta sẽ nhận được kết quả như hình bên dưới:\nfilesystem ở đường dẫn /dev/nvme0n1p1 là volume mà chúng ta đang sử dụng. Chúng ta sẽ thấy dung lượng trống của volume này là 3.5G. Để tránh tình trạng hết dung lượng trong suốt buổi workshop, chúng ta sẽ tăng dung lượng của volume này lên 20G.\nTăng kích thước volume của Amazon EBS lên 20G:\nbash resize.sh 20 Chúng ta sẽ thay output như này:\nBây giờ hãy kiểm tra lại dung lượng của volume hiện tại bằng lệnh sau:\ndf -h Như chúng ta thấy ở đường dẫn /dev/nvme0n1p1, dung lượng trống của volume hiện tại đã tăng lên 14G.\n"
+	"content": "Theo AWS, Amplify là một dịch vụ được thiết kế để giúp các nhà phát triển xây dựng các ứng dụng web và mobile nhanh hơn. Amplify cung cấp một tập hợp các công cụ và dịch vụ để xây dựng các ứng dụng web và mobile. Amplify CLI là một phần của Amplify Framework, nó cung cấp các lệnh để tạo và quản lý các tài nguyên AWS như Amazon Cognito, Amazon API Gateway, Amazon Lambda function, Amazon DynamoDB table, và Amazon S3 bucket.\nTrong workshop này, chúng ta sẽ chỉ cấu hình AWS Amplify Hosting, nó cung cấp một dịch vụ có thể quản lí dễ dàng cho việc triển khai các ứng dụng web tĩnh trên toàn cầu. Nó sẽ sử dụng Amazon S3 và Amazon CloudFornt để lưu trữ và phân phối các tài nguyên tĩnh của ứng dụng đó.\nCài đặt phiên bản mới nhất của Amplify CLI bằng cách chạy command sau: npm i -g @aws-amplify/cli Hoàn tất cài đặt Amplify CLI.\nSau khi tải xong, hãy cấu hình cho Amplify CLI: amplify configure Chúng ta sẽ nhận được một đường dẫn https://console.aws.amazon.com/ để đăng nhập vào AWS console.\nSau khi đăng nhập, nhấn Enter và chọn Region mà bạn đang làm workshop, với mình là ap-southeast-1. Sau đó nhấn Enter để tiếp tục, chúng ta sẽ nhận được một đường dẫn https://console.aws.amazon.com/iamv2/home#/users/create để tạo một user IAM mới.\nTruy cập vào đường dẫn trên, đặt tên amplify-user cho user đó, chọn Next.\nMặc định, chúng ta sẽ gán quyền AdministratorAccess cho user được cấu hình cho Amplify CLI\nỞ section Permmissions options, chọn Attach policies directly. Tìm và chọn AdministratorAccess. Sau đó nhấn Next. Ở trang Review and create, chọn Create user.\nTiếp theo, chọn user vừa được tạo amplify-user, chọn tab Security credentials, ở mục Access keys, click vào Create access key.\nỞ bước Access key best practices \u0026amp; alternatives, chọn Command Line Interface (CLI) và tick vào mục Confirm sau đó chọn Next.\nỞ trang Set description tag, hãy nhập mô tả cho Access key tùy theo ý của bạn, mình để mặc định và chọn Create access key. Vậy là bạn đã tạo thành công Access key cho user amplify-user, lưu lại Access key và Secret access key. Quay trở lại terminal ở Cloud9, nhấn Enter, nó sẽ yêu cầu mình nhập Access key và Secret access key vừa tạo. Sau khi nhập xong, nhấn Enter, ở mục Profile name, mình sẽ để default, nhấn tiếp Enter, vậy là đã cấu hình thành công Amplify CLI.\nBây giờ chúng ta đã sẵn sàng để sử dụng Amplify!\n"
 },
 {
 	"uri": "/vi/4-s3log/",

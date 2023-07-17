@@ -39,28 +39,16 @@
                 href="/vi/1-introduce/"
                 />
   </url><url>
-    <loc>/vi/3-accessibilitytoinstances/3.1-public-instance/</loc>
+    <loc>/vi/3-serverlessbackend/3.1-dynamodb/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-accessibilitytoinstances/3.1-public-instance/"
+                href="/3-serverlessbackend/3.1-dynamodb/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.1-public-instance/"
-                />
-  </url><url>
-    <loc>/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/"
+                href="/vi/3-serverlessbackend/3.1-dynamodb/"
                 />
   </url><url>
     <loc>/vi/2-prerequiste/2.1-createcloud9workspace/</loc>
@@ -73,18 +61,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/2-prerequiste/2.1-createcloud9workspace/"
-                />
-  </url><url>
-    <loc>/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/"
                 />
   </url><url>
     <loc>/vi/2-prerequiste/</loc>
@@ -111,28 +87,16 @@
                 href="/vi/2-prerequiste/2.2-ensurenodejsversion/"
                 />
   </url><url>
-    <loc>/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/</loc>
+    <loc>/vi/3-serverlessbackend/3.2-lambdafunction/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/"
+                href="/3-serverlessbackend/3.2-lambdafunction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/"
-                />
-  </url><url>
-    <loc>/vi/3-accessibilitytoinstances/3.2-private-instance/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-accessibilitytoinstances/3.2-private-instance/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.2-private-instance/"
+                href="/vi/3-serverlessbackend/3.2-lambdafunction/"
                 />
   </url><url>
     <loc>/vi/4-s3log/4.2-creates3bucket/</loc>
@@ -147,18 +111,6 @@
                 href="/vi/4-s3log/4.2-creates3bucket/"
                 />
   </url><url>
-    <loc>/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/"
-                />
-  </url><url>
     <loc>/vi/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/</loc>
     <xhtml:link
                 rel="alternate"
@@ -171,40 +123,16 @@
                 href="/vi/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/"
                 />
   </url><url>
-    <loc>/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/</loc>
+    <loc>/vi/3-serverlessbackend/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/"
+                href="/3-serverlessbackend/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/"
-                />
-  </url><url>
-    <loc>/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/"
-                />
-  </url><url>
-    <loc>/vi/3-accessibilitytoinstances/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-accessibilitytoinstances/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/"
+                href="/vi/3-serverlessbackend/"
                 />
   </url><url>
     <loc>/vi/4-s3log/4.3-creategwes3/</loc>

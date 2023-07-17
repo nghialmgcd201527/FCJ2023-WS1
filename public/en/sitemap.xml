@@ -15,40 +15,16 @@
                 href="/"
                 />
   </url><url>
-    <loc>/3-accessibilitytoinstances/3.1-public-instance/</loc>
+    <loc>/3-serverlessbackend/3.1-dynamodb/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.1-public-instance/"
+                href="/vi/3-serverlessbackend/3.1-dynamodb/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-accessibilitytoinstances/3.1-public-instance/"
-                />
-  </url><url>
-    <loc>/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/"
-                />
-  </url><url>
-    <loc>/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/"
+                href="/3-serverlessbackend/3.1-dynamodb/"
                 />
   </url><url>
     <loc>/1-introduce/</loc>
@@ -123,28 +99,16 @@
                 href="/4-s3log/4.1-updateiamrole/"
                 />
   </url><url>
-    <loc>/3-accessibilitytoinstances/3.2-private-instance/</loc>
+    <loc>/3-serverlessbackend/3.2-lambdafunction/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.2-private-instance/"
+                href="/vi/3-serverlessbackend/3.2-lambdafunction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-accessibilitytoinstances/3.2-private-instance/"
-                />
-  </url><url>
-    <loc>/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/"
+                href="/3-serverlessbackend/3.2-lambdafunction/"
                 />
   </url><url>
     <loc>/4-s3log/4.2-creates3bucket/</loc>
@@ -159,18 +123,6 @@
                 href="/4-s3log/4.2-creates3bucket/"
                 />
   </url><url>
-    <loc>/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/"
-                />
-  </url><url>
     <loc>/2-prerequiste/</loc>
     <xhtml:link
                 rel="alternate"
@@ -183,40 +135,16 @@
                 href="/2-prerequiste/"
                 />
   </url><url>
-    <loc>/3-accessibilitytoinstances/</loc>
+    <loc>/3-serverlessbackend/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/"
+                href="/vi/3-serverlessbackend/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-accessibilitytoinstances/"
-                />
-  </url><url>
-    <loc>/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/"
-                />
-  </url><url>
-    <loc>/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/"
+                href="/3-serverlessbackend/"
                 />
   </url><url>
     <loc>/4-s3log/4.3-creategwes3/</loc>

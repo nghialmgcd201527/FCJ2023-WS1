@@ -12,21 +12,21 @@
     <title>Deploy ứng dụng :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1689643861" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1689643861" rel="stylesheet">
-    <link href="/css/hybrid.css?1689643861" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1689643861" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1689643861" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689643861" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1689643861" rel="stylesheet">
-    <link href="/css/theme.css?1689643861" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1689643861" rel="stylesheet">
+    <link href="/css/nucleus.css?1689673103" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1689673103" rel="stylesheet">
+    <link href="/css/hybrid.css?1689673103" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1689673103" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1689673103" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689673103" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1689673103" rel="stylesheet">
+    <link href="/css/theme.css?1689673103" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1689673103" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1689643861" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1689673103" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1689643861"></script>
+    <script src="/js/jquery-3.3.1.min.js?1689673103"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1689643861"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1689643861"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1689673103"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1689673103"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1689643861"></script>
+<script type="text/javascript" src="/js/search.js?1689673103"></script>
 
     
   </div>
@@ -584,18 +584,86 @@
  
   
     
-    <li data-nav-id="/vi/6-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
+    <li data-nav-id="/vi/6-test/" title="Kiểm tra ứng dụng" class="dd-item 
         
         
         
         ">
-      <a href="/vi/6-cleanup/">
-          <b>6. </b>Dọn dẹp tài nguyên  
+      <a href="/vi/6-test/">
+           <b> 6. </b> Kiểm tra ứng dụng
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-test/6.1-dynamodb/" title="Deploy Serverless Application" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-test/6.1-dynamodb/">
+           <b> 5.1 </b> Deploy Serverless Application
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-test/6.2-logandmonitor/" title="Cấu hình API Gateway endpoint" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-test/6.2-logandmonitor/">
+           <b> 5.2 </b> Cấu hình API Gateway endpoint
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -744,15 +812,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -776,83 +836,21 @@
 
 
 
-	
-<div class="notices info" ><p><strong>Port Forwarding</strong> là mốt cách thức hữu ích để chuyển hướng lưu lượng mạng từ 1 địa chỉ IP - Port này sang 1 địa chỉ IP - Port khác. Với <strong>Port Forwarding</strong> chúng ta có thể truy cập một EC2 instance nằm trong private subnet từ máy trạm của chúng ta.</p>
+	<p>Trong bước này, chúng ta sẽ publish ứng dụng với amplify bằng câu lệnh sau:</p>
+<pre tabindex="0"><code>amplify publish
+</code></pre><p>Và nếu các bạn nhận được output giống như hình, các bạn đã deploy thành công ứng dụng của mình lên web.</p>
+<p><img src="/images/5.deploy/5.6-deployapp/5.6-1.png" alt="VPC"></p>
+<p>Sau khi publish, ở cuối trang terminal sẽ hiển thị URL của app chúng ta với domain <strong>amplifyapp.com</strong></p>
+<p>Bạn có thể đăng nhập với bất kì username và password nào mà bạn muốn bởi vì chưa có phần xác thực ở phía backend.</p>
+<p><img src="/images/5.deploy/5.6-deployapp/5.6-2.png" alt="VPC"></p>
+
+<div class="notices tip" ><p>Nếu bạn muốn tìm hiểu cách thêm xác thực vào ứng dụng của mình, <a href="https://docs.amplify.aws/lib/auth/getting-started/q/platform/js/">hãy truy cập tại đây</a></p>
 </div>
 
-<p>Chúng ta sẽ cấu hình <strong>Port Forwarding</strong> cho kết nối RDP giữa máy của mình với <strong>Private Windows Instance</strong> nằm trong private subnet mà chúng ta đã tạo cho bài thực hành này.</p>
-<p><img src="/images/arc-04.png" alt="port-fwd"></p>
-<h4 id="tạo-iam-user-có-quyền-kết-nối-ssm">Tạo IAM User có quyền kết nối SSM</h4>
-<ol>
-<li>Truy cập vào <a href="https://console.aws.amazon.com/iamv2/home">giao diện quản trị dịch vụ IAM</a></li>
-</ol>
-<ul>
-<li>Click <strong>Users</strong> , sau đó click <strong>Add users</strong>.</li>
-</ul>
-<p><img src="/images/5.fwd/001-fwd.png" alt="FWD"></p>
-<ol start="2">
-<li>Tại trang <strong>Add user</strong>.</li>
-</ol>
-<ul>
-<li>Tại mục <strong>User name</strong>, điền <strong>Portfwd</strong>.</li>
-<li>Click chọn <strong>Access key - Programmatic access</strong>.</li>
-<li>Click <strong>Next: Permissions</strong>.</li>
-</ul>
-<p><img src="/images/5.fwd/002-fwd.png" alt="FWD"></p>
-<ol start="3">
-<li>Click <strong>Attach existing policies directly</strong>.</li>
-</ol>
-<ul>
-<li>Tại ô tìm kiếm , điền <strong>ssm</strong>.</li>
-<li>Click chọn <strong>AmazonSSMFullAccess</strong>.</li>
-<li>Click <strong>Next: Tags</strong>, click <strong>Next: Reviews</strong>.</li>
-<li>Click <strong>Create user</strong>.</li>
-</ul>
-<ol start="4">
-<li>Lưu lại thông tin <strong>Access key ID</strong> và <strong>Secret access key</strong> để thực hiện cấu hình AWS CLI.</li>
-</ol>
-<h4 id="cài-đặt-và-cấu-hình-aws-cli-và-session-manager-plugin">Cài đặt và cấu hình AWS CLI và Session Manager Plugin</h4>
-<p>Để thực hiện phần thực hành này, đảm bảo máy trạm của bạn đã cài <a href="">AWS CLI</a> và <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html">Session Manager Plugin</a></p>
-<p>Bạn có thể tham khảo thêm bài thực hành về cài đặt và cấu hình AWS CLI <a href="https://000011.awsstudygroup.com/">tại đây</a>.</p>
-
-<div class="notices tip" ><p>Với Windows thì khi giải nén thư mục cài đặt <strong>Session Manager Plugin</strong> bạn hãy chạy file <strong>install.bat</strong> với quyền Administrator để thực hiện cài đặt.</p>
-</div>
-
-<h4 id="thực-hiện-portforwarding">Thực hiện Portforwarding</h4>
-<ol>
-<li>Chạy command dưới đây trong <strong>Command Prompt</strong> trên máy của bạn để cấu hình <strong>Port Forwarding</strong>.</li>
-</ol>
-<pre tabindex="0"><code>  aws ssm start-session --target (your ID windows instance) --document-name AWS-StartPortForwardingSession --parameters portNumber=&#34;3389&#34;,localPortNumber=&#34;9999&#34; --region (your region)
-</code></pre>
-<div class="notices tip" ><p>Thông tin <strong>Instance ID</strong> của <strong>Windows Private Instance</strong> có thể tìm được khi bạn xem chi tiết máy chủ EC2 Windows Private Instance.</p>
-</div>
-
-<ul>
-<li>Câu lệnh ví dụ</li>
-</ul>
-<pre tabindex="0"><code>C:\Windows\system32&gt;aws ssm start-session --target i-06343d7377486760c --document-name AWS-StartPortForwardingSession --parameters portNumber=&#34;3389&#34;,localPortNumber=&#34;9999&#34; --region ap-southeast-1
-</code></pre>
-<div class="notices warning" ><p>Nếu câu lệnh của bạn báo lỗi như dưới đây : <br>
-SessionManagerPlugin is not found. Please refer to SessionManager Documentation here: <a href="http://docs.aws.amazon.com/console/systems-manager/session-manager-plugin-not-found">http://docs.aws.amazon.com/console/systems-manager/session-manager-plugin-not-found</a><br>
-Chứng tỏ bạn chưa cài Session Manager Plugin thành công. Bạn có thể cần khởi chạy lại <strong>Command Prompt</strong> sau khi cài <strong>Session Manager Plugin</strong>.</p>
-</div>
-
-<ol start="2">
-<li>Kết nối tới <strong>Private Windows Instance</strong> bạn đã tạo bằng công cụ <strong>Remote Desktop</strong> trên máy trạm của bạn.</li>
-</ol>
-<ul>
-<li>Tại mục Computer: điền <strong>localhost:9999</strong>.</li>
-</ul>
-<p><img src="/images/5.fwd/003-fwd.png" alt="FWD"></p>
-<ol start="3">
-<li>Quay trở lại giao diện quản trị của dịch vụ System Manager - Session Manager.</li>
-</ol>
-<ul>
-<li>Click tab <strong>Session history</strong>.</li>
-<li>Chúng ta sẽ thấy các session logs với tên Document là <strong>AWS-StartPortForwardingSession</strong>.</li>
-</ul>
-<p><img src="/images/5.fwd/004-fwd.png" alt="FWD"></p>
-<p>Chúc mừng bạn đã hoàn tất bài thực hành hướng dẫn cách sử dụng Session Manager để kết nối cũng như lưu trữ các session logs trong S3 bucket. Hãy nhớ thực hiện bước dọn dẹp tài nguyên để tránh sinh chi phí ngoài ý muốn nhé.</p>
+<p>Trang chính của ứng dụng chúng ta sẽ trông như thế này.</p>
+<p><img src="/images/5.deploy/5.6-deployapp/5.6-3.png" alt="VPC"></p>
+<p>Bất cứ khi nào chúng ta muốn thay đổi gì ở ứng dụng và publish nó, chỉ cần chạy lại câu lệnh <code>amplify publish</code>. Chúng ta sẽ không cần modify ứng dụng web, chỉ cần modify ở SAM template và Lambda functions.</p>
+<p>Để quản lí ứng dụng và cấu hình hosting ở Amplify Console, hãy chạy câu lệnh <code>amplify console</code>.</p>
 
 
 
@@ -1187,8 +1185,42 @@ Chứng tỏ bạn chưa cài Session Manager Plugin thành công. Bạn có th�
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -1205,7 +1237,7 @@ Chứng tỏ bạn chưa cài Session Manager Plugin thành công. Bạn có th�
 			<a class="nav nav-prev" href="/vi/5-deploy/5.5-amplifyhosting/" title="Thêm Amplify Hosting vào ứng dụng"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/6-cleanup/" title="Dọn dẹp tài nguyên  " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/6-test/" title="Kiểm tra ứng dụng" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1215,19 +1247,19 @@ Chứng tỏ bạn chưa cài Session Manager Plugin thành công. Bạn có th�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1689643861"></script>
-    <script src="/js/perfect-scrollbar.min.js?1689643861"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1689643861"></script>
-    <script src="/js/jquery.sticky.js?1689643861"></script>
-    <script src="/js/featherlight.min.js?1689643861"></script>
-    <script src="/js/highlight.pack.js?1689643861"></script>
+    <script src="/js/clipboard.min.js?1689673103"></script>
+    <script src="/js/perfect-scrollbar.min.js?1689673103"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1689673103"></script>
+    <script src="/js/jquery.sticky.js?1689673103"></script>
+    <script src="/js/featherlight.min.js?1689673103"></script>
+    <script src="/js/highlight.pack.js?1689673103"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1689643861"></script>
-    <script src="/js/learn.js?1689643861"></script>
-    <script src="/js/hugo-learn.js?1689643861"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1689673103"></script>
+    <script src="/js/learn.js?1689673103"></script>
+    <script src="/js/hugo-learn.js?1689673103"></script>
 
-    <link href="/mermaid/mermaid.css?1689643861" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1689643861"></script>
+    <link href="/mermaid/mermaid.css?1689673103" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1689673103"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

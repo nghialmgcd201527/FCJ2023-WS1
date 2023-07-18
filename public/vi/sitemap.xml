@@ -2,20 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/vi/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/"
-                />
-  </url><url>
     <loc>/vi/5-deploy/5.1-deployserverless/</loc>
+  </url><url>
+    <loc>/vi/6-test/6.1-dynamodb/</loc>
   </url><url>
     <loc>/vi/1-introduce/</loc>
     <xhtml:link
@@ -39,6 +28,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/3-serverlessbackend/3.1-dynamodb/"
+                />
+  </url><url>
+    <loc>/vi/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/"
                 />
   </url><url>
     <loc>/vi/2-prerequiste/2.1-createcloud9workspace/</loc>
@@ -66,6 +67,8 @@
                 />
   </url><url>
     <loc>/vi/5-deploy/5.2-configapigateway/</loc>
+  </url><url>
+    <loc>/vi/6-test/6.2-logandmonitor/</loc>
   </url><url>
     <loc>/vi/2-prerequiste/2.2-ensurenodejsversion/</loc>
     <xhtml:link
@@ -157,20 +160,19 @@
   </url><url>
     <loc>/vi/5-deploy/5.5-amplifyhosting/</loc>
   </url><url>
-    <loc>/vi/6-cleanup/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <loc>/vi/5-deploy/5.6-deployapp/</loc>
+  </url><url>
+    <loc>/vi/6-test/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-cleanup/"
+                href="/6-test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-cleanup/"
+                href="/vi/6-test/"
                 />
-  </url><url>
-    <loc>/vi/5-deploy/5.6-deployapp/</loc>
   </url><url>
     <loc>/vi/categories/</loc>
     <xhtml:link

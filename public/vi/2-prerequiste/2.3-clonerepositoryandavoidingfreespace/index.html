@@ -12,21 +12,21 @@
     <title>Clone Git repository và vấn đề của dung lượng trống Cloud9 :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1689643861" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1689643861" rel="stylesheet">
-    <link href="/css/hybrid.css?1689643861" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1689643861" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1689643861" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689643861" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1689643861" rel="stylesheet">
-    <link href="/css/theme.css?1689643861" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1689643861" rel="stylesheet">
+    <link href="/css/nucleus.css?1689673103" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1689673103" rel="stylesheet">
+    <link href="/css/hybrid.css?1689673103" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1689673103" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1689673103" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689673103" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1689673103" rel="stylesheet">
+    <link href="/css/theme.css?1689673103" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1689673103" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1689643861" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1689673103" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1689643861"></script>
+    <script src="/js/jquery-3.3.1.min.js?1689673103"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1689643861"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1689643861"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1689673103"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1689673103"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1689643861"></script>
+<script type="text/javascript" src="/js/search.js?1689673103"></script>
 
     
   </div>
@@ -584,18 +584,86 @@
  
   
     
-    <li data-nav-id="/vi/6-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
+    <li data-nav-id="/vi/6-test/" title="Kiểm tra ứng dụng" class="dd-item 
         
         
         
         ">
-      <a href="/vi/6-cleanup/">
-          <b>6. </b>Dọn dẹp tài nguyên  
+      <a href="/vi/6-test/">
+           <b> 6. </b> Kiểm tra ứng dụng
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-test/6.1-dynamodb/" title="Deploy Serverless Application" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-test/6.1-dynamodb/">
+           <b> 5.1 </b> Deploy Serverless Application
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-test/6.2-logandmonitor/" title="Cấu hình API Gateway endpoint" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-test/6.2-logandmonitor/">
+           <b> 5.2 </b> Cấu hình API Gateway endpoint
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -809,7 +877,7 @@ df -h
 <p>filesystem ở đường dẫn /dev/nvme0n1p1 là volume mà chúng ta đang sử dụng. Chúng ta sẽ thấy dung lượng trống của volume này là 3.5G. Để tránh tình trạng hết dung lượng trong suốt buổi workshop, chúng ta sẽ tăng dung lượng của volume này lên 20G.</p>
 <p>Tăng kích thước volume của Amazon EBS lên 20G:</p>
 <pre tabindex="0"><code>bash resize.sh 20
-</code></pre><p>Chúng ta sẽ thay output như này:</p>
+</code></pre><p>Chúng ta sẽ thấy output như này:</p>
 <p><img src="/images/2.prerequisite/2.3-clonerepo/clonerepo-4.png" alt="VPC"></p>
 <p>Bây giờ hãy kiểm tra lại dung lượng của volume hiện tại bằng lệnh sau:</p>
 <pre tabindex="0"><code>df -h
@@ -1149,8 +1217,42 @@ df -h
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -1177,19 +1279,19 @@ df -h
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1689643861"></script>
-    <script src="/js/perfect-scrollbar.min.js?1689643861"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1689643861"></script>
-    <script src="/js/jquery.sticky.js?1689643861"></script>
-    <script src="/js/featherlight.min.js?1689643861"></script>
-    <script src="/js/highlight.pack.js?1689643861"></script>
+    <script src="/js/clipboard.min.js?1689673103"></script>
+    <script src="/js/perfect-scrollbar.min.js?1689673103"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1689673103"></script>
+    <script src="/js/jquery.sticky.js?1689673103"></script>
+    <script src="/js/featherlight.min.js?1689673103"></script>
+    <script src="/js/highlight.pack.js?1689673103"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1689643861"></script>
-    <script src="/js/learn.js?1689643861"></script>
-    <script src="/js/hugo-learn.js?1689643861"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1689673103"></script>
+    <script src="/js/learn.js?1689673103"></script>
+    <script src="/js/hugo-learn.js?1689673103"></script>
 
-    <link href="/mermaid/mermaid.css?1689643861" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1689643861"></script>
+    <link href="/mermaid/mermaid.css?1689673103" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1689673103"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -2,19 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
-    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/"
-                />
-  </url><url>
     <loc>/3-serverlessbackend/3.1-dynamodb/</loc>
     <xhtml:link
                 rel="alternate"
@@ -87,6 +74,18 @@
                 href="/2-prerequiste/2.4-installamplifycli/"
                 />
   </url><url>
+    <loc>/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/"
+                />
+  </url><url>
     <loc>/3-serverlessbackend/3.2-lambdafunction/</loc>
     <xhtml:link
                 rel="alternate"
@@ -147,17 +146,16 @@
                 href="/5-deploy/"
                 />
   </url><url>
-    <loc>/6-cleanup/</loc>
-    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
+    <loc>/6-test/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-cleanup/"
+                href="/vi/6-test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-cleanup/"
+                href="/6-test/"
                 />
   </url><url>
     <loc>/categories/</loc>

@@ -135,3 +135,7 @@ Giá trị `AWS::Serverless::Function` được dùng để khởi tạo Lambda 
 ```
 
 Chi tiết và công dụng của các thuộc tính được khai báo ở trên các bạn có thể xem lại ở phần [này](/vi/3-serverlessbackend/).
+
+Hãy làm như hình bên dưới.
+
+![VPC](/images/3.serverlessbackend/3.2-lambdafunction/3.2-1.png)

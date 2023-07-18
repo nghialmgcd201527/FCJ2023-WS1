@@ -15,6 +15,8 @@
                 href="/vi/"
                 />
   </url><url>
+    <loc>/vi/5-deploy/5.1-deployserverless/</loc>
+  </url><url>
     <loc>/vi/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
@@ -63,6 +65,8 @@
                 href="/vi/2-prerequiste/"
                 />
   </url><url>
+    <loc>/vi/5-deploy/5.2-configapigateway/</loc>
+  </url><url>
     <loc>/vi/2-prerequiste/2.2-ensurenodejsversion/</loc>
     <xhtml:link
                 rel="alternate"
@@ -99,6 +103,8 @@
                 href="/vi/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/"
                 />
   </url><url>
+    <loc>/vi/5-deploy/5.3-initializeamplify/</loc>
+  </url><url>
     <loc>/vi/3-serverlessbackend/</loc>
     <xhtml:link
                 rel="alternate"
@@ -110,6 +116,8 @@
                 hreflang="vi"
                 href="/vi/3-serverlessbackend/"
                 />
+  </url><url>
+    <loc>/vi/5-deploy/5.4-buildapp/</loc>
   </url><url>
     <loc>/vi/2-prerequiste/2.4-installamplifycli/</loc>
     <xhtml:link
@@ -135,17 +143,19 @@
                 href="/vi/4-apigateway/"
                 />
   </url><url>
-    <loc>/vi/5-portfwd/</loc>
+    <loc>/vi/5-deploy/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-portfwd/"
+                href="/5-deploy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-portfwd/"
+                href="/vi/5-deploy/"
                 />
+  </url><url>
+    <loc>/vi/5-deploy/5.5-amplifyhosting/</loc>
   </url><url>
     <loc>/vi/6-cleanup/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
@@ -159,6 +169,8 @@
                 hreflang="vi"
                 href="/vi/6-cleanup/"
                 />
+  </url><url>
+    <loc>/vi/5-deploy/5.6-deployapp/</loc>
   </url><url>
     <loc>/vi/categories/</loc>
     <xhtml:link

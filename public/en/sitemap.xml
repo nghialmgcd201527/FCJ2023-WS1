@@ -135,16 +135,16 @@
                 href="/4-apigateway/"
                 />
   </url><url>
-    <loc>/5-portfwd/</loc>
+    <loc>/5-deploy/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-portfwd/"
+                href="/vi/5-deploy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-portfwd/"
+                href="/5-deploy/"
                 />
   </url><url>
     <loc>/6-cleanup/</loc>

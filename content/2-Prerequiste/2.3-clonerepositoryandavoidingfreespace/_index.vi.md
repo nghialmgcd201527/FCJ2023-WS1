@@ -55,7 +55,7 @@ bash resize.sh 20
 
 ```
 
-Chúng ta sẽ thay output như này:
+Chúng ta sẽ thấy output như này:
 
 ![VPC](/images/2.prerequisite/2.3-clonerepo/clonerepo-4.png)
 

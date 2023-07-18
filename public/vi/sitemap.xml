@@ -4,8 +4,6 @@
   <url>
     <loc>/vi/5-deploy/5.1-deployserverless/</loc>
   </url><url>
-    <loc>/vi/6-test/6.1-dynamodb/</loc>
-  </url><url>
     <loc>/vi/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
@@ -29,6 +27,8 @@
                 hreflang="vi"
                 href="/vi/3-serverlessbackend/3.1-dynamodb/"
                 />
+  </url><url>
+    <loc>/vi/6-test/6.1-dynamodb/</loc>
   </url><url>
     <loc>/vi/</loc>
     <xhtml:link

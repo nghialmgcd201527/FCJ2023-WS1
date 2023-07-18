@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Deploy Serverless Application :: AWS System Manager</title>
+    <title>Quản lí dữ liệu trong DynamoDB :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1689673103" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1689673103" rel="stylesheet">
-    <link href="/css/hybrid.css?1689673103" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1689673103" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1689673103" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689673103" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1689673103" rel="stylesheet">
-    <link href="/css/theme.css?1689673103" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1689673103" rel="stylesheet">
+    <link href="/css/nucleus.css?1689690923" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1689690923" rel="stylesheet">
+    <link href="/css/hybrid.css?1689690923" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1689690923" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1689690923" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689690923" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1689690923" rel="stylesheet">
+    <link href="/css/theme.css?1689690923" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1689690923" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1689673103" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1689690923" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1689673103"></script>
+    <script src="/js/jquery-3.3.1.min.js?1689690923"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1689673103"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1689673103"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1689690923"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1689690923"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1689673103"></script>
+<script type="text/javascript" src="/js/search.js?1689690923"></script>
 
     
   </div>
@@ -615,13 +615,13 @@
  
   
     
-    <li data-nav-id="/vi/6-test/6.1-dynamodb/" title="Deploy Serverless Application" class="dd-item 
+    <li data-nav-id="/vi/6-test/6.1-dynamodb/" title="Quản lí dữ liệu trong DynamoDB" class="dd-item 
         
         active
         
         ">
       <a href="/vi/6-test/6.1-dynamodb/">
-           <b> 5.1 </b> Deploy Serverless Application
+           <b> 6.1 </b> Quản lí dữ liệu trong DynamoDB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -649,7 +649,7 @@
         
         ">
       <a href="/vi/6-test/6.2-logandmonitor/">
-           <b> 5.2 </b> Cấu hình API Gateway endpoint
+           <b> 6.2 </b> Cấu hình API Gateway endpoint
           
             <i class="fas fa-check read-icon"></i>
           
@@ -799,7 +799,7 @@
             
           
           
-            <a href='/vi/'>Session Management</a> > <a href='/vi/6-test/'>Kiểm tra ứng dụng</a> > Deploy Serverless Application
+            <a href='/vi/'>Session Management</a> > <a href='/vi/6-test/'>Kiểm tra ứng dụng</a> > Quản lí dữ liệu trong DynamoDB
           
         
           
@@ -828,7 +828,7 @@
           
             <h1>
               
-              Deploy Serverless Application
+              Quản lí dữ liệu trong DynamoDB
             </h1>
           
 
@@ -836,36 +836,24 @@
 
 
 
-	<p>Trong bước này, chúng ta sẽ sử dụng SAM CLI để build và deploy ứng dụng serverless.</p>
-<p>Đầu tiên, chúng ta cần chắc chắn rằng đã cập nhật phiên bản mới nhất của SAM CLI.</p>
-<pre tabindex="0"><code>pip install --user --upgrade aws-sam-cli
-</code></pre><p>Chúng ta sẽ thấy output như hình.
-<img src="/images/5.deploy/5.1-serverless/5.1-1.png" alt="VPC"></p>
-<p>Tiếp theo, đi đến thư mục <strong>sam:</strong></p>
-<pre tabindex="0"><code>cd ~/environment/serverless-tasks-webapp/sam
-</code></pre><p>Chạy câu lệnh dưới đây để build ứng dụng:</p>
-<pre tabindex="0"><code>sam build
-</code></pre><p>Khi build thành công, chúng ta sẽ có như hình.</p>
-<p><img src="/images/5.deploy/5.1-serverless/5.1-2.png" alt="VPC"></p>
-<p>Câu lệnh <code>sam build</code> xử lí file template AWS SAM, code của ứng dụng và những dependencies. Nó cũng coppy build artifacts theo một format và ví trị được xác định sẵn trong workflow của bạn.</p>
-<p>Bây giờ, chúng ta sẽ deploy ứng dụng:</p>
-<pre tabindex="0"><code>sam deploy --guided
-</code></pre><p>Câu lệnh này sẽ đóng gói và deploy ứng dụng lên account AWS của chúng ta.</p>
-<p>Đầu tiên, nó sẽ hỏi chúng ta tên stack, chúng ta có thể đặt tên bất kỳ, ở đây chúng ta đặt là <strong>tasks-app.</strong> Sau đó sẽ chọn region mà chúng ta muốn deploy ứng dụng lên, ở đây chúng ta chọn <strong>ap-southeast-1</strong>.</p>
-<p><img src="/images/5.deploy/5.1-serverless/5.1-3.png" alt="VPC"></p>
-<p>Tiếp theo, chúng ta sẽ nhập <strong>y</strong> và nhấn <strong>Enter</strong> để confirm deploy.</p>
-<p>Để cho phép SAM có thể tạo roles để kết nối tới các resources trong template của chúng ta, hãy cho phép SAM CLI tạo ra IAM roles, chúng ta nhập <strong>Y</strong> và nhấn <strong>Enter.</strong></p>
-<p>Vô hiệu hóa rollback để bảo vệ những resources của chúng ta khi quá trình khiển khai thất bại, chúng ta nhập <strong>y</strong> và nhấn <strong>Enter.</strong></p>
-<p>Cho phép lưu các arguments vào file cấu hình, chúng ta nhập <strong>Y</strong> và nhấn <strong>Enter.</strong></p>
-<p>Vì file SAM configuration chưa có nên chúng ta tạo ra nó, chúng ta nhấn <strong>Enter</strong> để mặc định, tương tự với môi trường của SAM configuration.</p>
-<p>Kiểm tra lại thông tin trước khi deploy.</p>
-<p><img src="/images/5.deploy/5.1-serverless/5.1-4.png" alt="VPC"></p>
-<p>Nếu deploy thành công, chúng ta sẽ thấy output như hình.</p>
-<p><img src="/images/5.deploy/5.1-serverless/5.1-5.png" alt="VPC"></p>
-
-<div class="notices note" ><p>Hãy ghi chú và lưu lại giá trị của key <strong>TasksApi</strong> và <strong>S3BucketName,</strong> nó sẽ cần cho những bước tiếp theo.</p>
-</div>
-
+	<ol>
+<li>Nhập <strong>DynamoDB</strong> ở thanh tìm kiếm service trên AWS Console sau đó chọn <strong>DynamoDB</strong>.</li>
+</ol>
+<p><img src="/images/6.test/6.1-dynamodb/6.1-1.png" alt="VPC"></p>
+<ol start="2">
+<li>Ở thanh điều hướng bên trái, chọn <strong>Tables.</strong></li>
+<li>Click vào table có tên bao gồm tên của ứng của chúng ta <strong>tasks-app-TasksTable.</strong> Đây là table được tạo bởi SAM template.</li>
+</ol>
+<p><img src="/images/6.test/6.1-dynamodb/6.1-2.png" alt="VPC"></p>
+<ol start="4">
+<li>Click vào nút <strong>Explore table items.</strong></li>
+</ol>
+<p><img src="/images/6.test/6.1-dynamodb/6.1-3.png" alt="VPC"></p>
+<p>Chúng ta sẽ thấy dữ liệu ở trong table ở phần <strong>Items returned.</strong></p>
+<p><img src="/images/6.test/6.1-dynamodb/6.1-4.png" alt="VPC"></p>
+<p>Click vào partition key (<strong>user</strong>) của bảng đó sẽ đưa bạn đến nơi chỉnh sửa thông tin của item đó.</p>
+<p><img src="/images/6.test/6.1-dynamodb/6.1-5.png" alt="VPC"></p>
+<p>Khi bạn thay đổi dữ liệu ở DynamoDB, chúng ta cần refresh lại trang web của ứng dụng để thấy được sự thay đổi.</p>
 
 
 
@@ -1259,19 +1247,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1689673103"></script>
-    <script src="/js/perfect-scrollbar.min.js?1689673103"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1689673103"></script>
-    <script src="/js/jquery.sticky.js?1689673103"></script>
-    <script src="/js/featherlight.min.js?1689673103"></script>
-    <script src="/js/highlight.pack.js?1689673103"></script>
+    <script src="/js/clipboard.min.js?1689690923"></script>
+    <script src="/js/perfect-scrollbar.min.js?1689690923"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1689690923"></script>
+    <script src="/js/jquery.sticky.js?1689690923"></script>
+    <script src="/js/featherlight.min.js?1689690923"></script>
+    <script src="/js/highlight.pack.js?1689690923"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1689673103"></script>
-    <script src="/js/learn.js?1689673103"></script>
-    <script src="/js/hugo-learn.js?1689673103"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1689690923"></script>
+    <script src="/js/learn.js?1689690923"></script>
+    <script src="/js/hugo-learn.js?1689690923"></script>
 
-    <link href="/mermaid/mermaid.css?1689673103" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1689673103"></script>
+    <link href="/mermaid/mermaid.css?1689690923" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1689690923"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

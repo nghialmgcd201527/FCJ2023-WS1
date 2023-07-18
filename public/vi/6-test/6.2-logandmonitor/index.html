@@ -12,21 +12,21 @@
     <title>Cấu hình API Gateway endpoint :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1689673103" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1689673103" rel="stylesheet">
-    <link href="/css/hybrid.css?1689673103" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1689673103" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1689673103" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689673103" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1689673103" rel="stylesheet">
-    <link href="/css/theme.css?1689673103" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1689673103" rel="stylesheet">
+    <link href="/css/nucleus.css?1689690923" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1689690923" rel="stylesheet">
+    <link href="/css/hybrid.css?1689690923" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1689690923" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1689690923" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689690923" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1689690923" rel="stylesheet">
+    <link href="/css/theme.css?1689690923" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1689690923" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1689673103" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1689690923" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1689673103"></script>
+    <script src="/js/jquery-3.3.1.min.js?1689690923"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1689673103"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1689673103"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1689690923"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1689690923"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1689673103"></script>
+<script type="text/javascript" src="/js/search.js?1689690923"></script>
 
     
   </div>
@@ -615,13 +615,13 @@
  
   
     
-    <li data-nav-id="/vi/6-test/6.1-dynamodb/" title="Deploy Serverless Application" class="dd-item 
+    <li data-nav-id="/vi/6-test/6.1-dynamodb/" title="Quản lí dữ liệu trong DynamoDB" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-test/6.1-dynamodb/">
-           <b> 5.1 </b> Deploy Serverless Application
+           <b> 6.1 </b> Quản lí dữ liệu trong DynamoDB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -649,7 +649,7 @@
         
         ">
       <a href="/vi/6-test/6.2-logandmonitor/">
-           <b> 5.2 </b> Cấu hình API Gateway endpoint
+           <b> 6.2 </b> Cấu hình API Gateway endpoint
           
             <i class="fas fa-check read-icon"></i>
           
@@ -836,17 +836,9 @@
 
 
 
-	<p>Sau khi chạy câu lệnh <code>sam deploy --guided</code> ở bước trước đó, bạn sẽ nhận được URL của API Gateway endpoint.</p>
-<p>Ứng dụng web yêu cầu cấu hình cho endpoint này để nó có thể biết được nơi để gửi các request.</p>
-<p>Coppy URL của API Gateway endpoint của ứng dụng chúng ta, vào thư mục <code>/webapp/src</code>, mở file <strong>main.js.</strong> Paste URL đó vào giá trị của <code>axios.defaults.baseURL</code> như hình.</p>
-
-<div class="notices warning" ><p>Hãy lưu ý rằng bạn đã coppy bao gồm tên của stage <strong>/v1</strong> trong URL đó và xóa đi dấu <strong>/</strong> ở cuối URL.</p>
-</div>
-
-<p><img src="/images/5.deploy/5.2-apigateway/5.2-1.png" alt="VPC"></p>
-<p>Dòng <code>Vue.config.productionTip = false</code> sẽ tắt các tip được hiển thị trong Vue console, nó sẽ tối ưu hóa trong môi trường production.</p>
-<p>Tiếp theo, chúng ta sẽ set mặc định URL cho tất cả Axios requests. Nó sẽ là endpoint URL nơi mà API request được gửi đến.</p>
-<p>Tổng quát, đoạn code phía trên khởi tạo ứng dụng Vue.js bằng cách tạo một Vue instance, cấu hình base URL cho Axios requests. Nó cũng tắt các tip được hiển thị trong Vue console.</p>
+	<ol>
+<li>Nhập <strong>Cloud9</strong> ở thanh tìm kiếm service trên AWS Console sau đó chọn <strong>Cloud9</strong>.</li>
+</ol>
 
 
 
@@ -1227,10 +1219,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/6-test/6.1-dynamodb/" title="Deploy Serverless Application"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/6-test/6.1-dynamodb/" title="Quản lí dữ liệu trong DynamoDB"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/6-test/6.1-dynamodb/" title="Deploy Serverless Application" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/6-test/6.1-dynamodb/" title="Quản lí dữ liệu trong DynamoDB" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1240,19 +1232,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1689673103"></script>
-    <script src="/js/perfect-scrollbar.min.js?1689673103"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1689673103"></script>
-    <script src="/js/jquery.sticky.js?1689673103"></script>
-    <script src="/js/featherlight.min.js?1689673103"></script>
-    <script src="/js/highlight.pack.js?1689673103"></script>
+    <script src="/js/clipboard.min.js?1689690923"></script>
+    <script src="/js/perfect-scrollbar.min.js?1689690923"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1689690923"></script>
+    <script src="/js/jquery.sticky.js?1689690923"></script>
+    <script src="/js/featherlight.min.js?1689690923"></script>
+    <script src="/js/highlight.pack.js?1689690923"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1689673103"></script>
-    <script src="/js/learn.js?1689673103"></script>
-    <script src="/js/hugo-learn.js?1689673103"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1689690923"></script>
+    <script src="/js/learn.js?1689690923"></script>
+    <script src="/js/hugo-learn.js?1689690923"></script>
 
-    <link href="/mermaid/mermaid.css?1689673103" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1689673103"></script>
+    <link href="/mermaid/mermaid.css?1689690923" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1689690923"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Cấu hình API Gateway endpoint :: AWS System Manager</title>
+    <title>Logging và Monitoring :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1689690923" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1689690923" rel="stylesheet">
-    <link href="/css/hybrid.css?1689690923" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1689690923" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1689690923" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689690923" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1689690923" rel="stylesheet">
-    <link href="/css/theme.css?1689690923" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1689690923" rel="stylesheet">
+    <link href="/css/nucleus.css?1689749062" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1689749062" rel="stylesheet">
+    <link href="/css/hybrid.css?1689749062" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1689749062" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1689749062" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689749062" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1689749062" rel="stylesheet">
+    <link href="/css/theme.css?1689749062" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1689749062" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1689690923" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1689749062" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1689690923"></script>
+    <script src="/js/jquery-3.3.1.min.js?1689749062"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1689690923"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1689690923"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1689749062"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1689749062"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1689690923"></script>
+<script type="text/javascript" src="/js/search.js?1689749062"></script>
 
     
   </div>
@@ -643,13 +643,13 @@
  
   
     
-    <li data-nav-id="/vi/6-test/6.2-logandmonitor/" title="Cấu hình API Gateway endpoint" class="dd-item 
+    <li data-nav-id="/vi/6-test/6.2-logandmonitor/" title="Logging và Monitoring" class="dd-item 
         
         active
         
         ">
       <a href="/vi/6-test/6.2-logandmonitor/">
-           <b> 6.2 </b> Cấu hình API Gateway endpoint
+           <b> 6.2 </b> Logging và Monitoring
           
             <i class="fas fa-check read-icon"></i>
           
@@ -664,6 +664,58 @@
           
         
         </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/7-rekognition/" title="Cấu hình cho trích xuất metadata từ hình ảnh: Amazon Rekognition" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/7-rekognition/">
+           <b> 7. </b> Cấu hình cho trích xuất metadata từ hình ảnh: Amazon Rekognition
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/8-terminate/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/8-terminate/">
+           <b> 8. </b> Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -799,7 +851,7 @@
             
           
           
-            <a href='/vi/'>Session Management</a> > <a href='/vi/6-test/'>Kiểm tra ứng dụng</a> > Cấu hình API Gateway endpoint
+            <a href='/vi/'>Session Management</a> > <a href='/vi/6-test/'>Kiểm tra ứng dụng</a> > Logging và Monitoring
           
         
           
@@ -812,7 +864,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -828,7 +888,7 @@
           
             <h1>
               
-              Cấu hình API Gateway endpoint
+              Logging và Monitoring
             </h1>
           
 
@@ -836,9 +896,48 @@
 
 
 
-	<ol>
-<li>Nhập <strong>Cloud9</strong> ở thanh tìm kiếm service trên AWS Console sau đó chọn <strong>Cloud9</strong>.</li>
+	<h4 id="logging"><strong>Logging</strong></h4>
+<p>Centralized logging cho chúng ta 2 lợi ích quan trọng. Đầu tiên các log được ghi lại được lưu trữ trong một nơi duy nhất và được format theo một tiêu chuẩn nhất định, giúp chúng ta đơn giản trong việc quản lí các tasks và phân tích logs. Thứ hai, nó cung cấp cho chúng ta một nơi lưu trữ an toàn cho dữ liệu của các logs của chúng ta.</p>
+<p>Trong AWS Lambda, service logging mặc định là Amazon CloudWatch.</p>
+<p>Lambda tự động truyền thông tin về các lúc gọi function, cùng với các logs và output từ code của functions của chúng ta sang CloudWatch Logs.</p>
+<p>Các nhóm log là một phần tiêu chuẩn của CloudWatch và được dùng để phân loại các logs. Bất kì các logs được tạo bởi Lambda function đều có quy ước đặt tên là <code>/aws/lambda/function-name</code>. Một nhóm log là một tập hợp các log streams, bạn có thể xem chi tiết nó trong CloudWatch console.</p>
+<ol>
+<li>Nhập <strong>CloudWatch</strong> ở thanh tìm kiếm service trên AWS Console sau đó chọn <strong>CloudWatch</strong>.</li>
 </ol>
+<p><img src="/images/6.test/6.2-logmonitor/6.2-1.png" alt="VPC"></p>
+<ol start="2">
+<li>Ở thanh điều hướng bên trái, chọn <strong>Log groups.</strong></li>
+</ol>
+<p><img src="/images/6.test/6.2-logmonitor/6.2-2.png" alt="VPC"></p>
+<ol start="3">
+<li>Chọn log group với function <strong>CreateTaskFunction</strong>.</li>
+</ol>
+<p><img src="/images/6.test/6.2-logmonitor/6.2-3.png" alt="VPC"></p>
+<p>Mỗi phiên bản của một Lambda function có một stream log riêng. Nếu một function được mở rộng thì phiên bản mới đó đồng thời có log stream riêng. Mỗi khi một environment được chọn để thực thi và một environment mới được tạo ra để đáp ứng một lượng invocation nhất định và nó sẽ tạo ra một log stream mới. Cách đặt tên cho các log streams là <code>YYYY/MM//DD [Function version] [Execution environment GUID]</code></p>
+<p>Ví dụ, đây là log stream của function <strong>CreateTaskFunction</strong>.</p>
+<p><img src="/images/6.test/6.2-logmonitor/6.2-4.png" alt="VPC"></p>
+<p>Trong những logs trên này có:</p>
+<ul>
+<li><strong>RequestId:</strong> là một ID duy nhất được tạo ra cho mỗi lần gọi function. Nếu Lambda function gọi lại request thì ID này sẽ không thay đổi và giữ nguyên trong logs cho mỗi lần gọi lại tiếp theo.</li>
+<li><strong>Start/End:</strong> các giá trị này đánh dấu một invocation, vì vậy những dòng log ở giữa các giá trị này đều thuộc về chung một invocation.</li>
+<li><strong>Duration:</strong> thời gian thực thi của function.</li>
+<li><strong>Billed Duration:</strong> phép toán làm tròn cho Duration.</li>
+<li><strong>Memory Size:</strong> kích thước bộ nhớ được cấp phát cho function.</li>
+<li><strong>Max Memory Used:</strong> kích thước bộ nhớ tối đa được sử dụng trong quá trình thực thi function.</li>
+<li><strong>Init Duration:</strong> thời gian tính từ khi chạy phần <strong>INIT.</strong></li>
+</ul>
+<h4 id="monitoring"><strong>Monitoring</strong></h4>
+<p>Metrics là dữ liệu số đo ở các khoảng thời gian khác nhau (time series data) và chỉ số service-level (request rate, error rate, duration, CPU, etc). Lambda tự động publish một lượng metrics cho Lambda functions.</p>
+<p>Để theo dõi và quan sát các Lambda functions, các metrics quan trọng nhất là:</p>
+<ul>
+<li><strong>Errors:</strong> Liệu rằng errors có phải do logic hoặc do runtime trong code hoặc do tương tác lỗi với Lambda service hoặc các services khác gây ra hay không. Những thứ này đều có thể do các yếu tố khác gây ra, chẳng hạn như là không được cấp quyền hoặc vượt quá resource limit.</li>
+<li><strong>Excution time:</strong> Đo thời gian response chỉ cho chúng ta cái nhìn hạn chế về hiệu suất trong distributed applications. Điều quan trọng là nắm bắt và theo dõi hiệu suất ở các khoảng phần trăm (chẳng hạn như 95% và 99%) để đo lường hiệu suất cho ít nhất 5% và 1% requests.</li>
+<li><strong>Throttling:</strong> Ứng dụng serverless sử dụng resource có thể mở rộng với Service Quotas để bảo đảm cho khách hàng. Throttling có thể cho chúng ta biết quotas được thiết lập không chính xác, có lỗi trong cấu trúc của hệ thống hoặc mức lưu lượng truy cập vượt quá giới hạn.</li>
+</ul>
+<p>Tất cả Lambda functions tự động tích hợp với CloudWatch. Lambda tự động ghi lại nhiều metrics, nó luôn được publish lên CloudWatch metrics. Nếu bạn điều huwosng đến một function trong Lambda, phần <strong>Monitor</strong> của mục <strong>Metrics</strong> cho chúng ta xem nhanh về các CloudWatch metrics được tích hợp với một function.</p>
+<p>Để có thể vào xem <strong>Mornitor</strong>, hãy vào <strong>Lambda</strong> console, chọn <strong>Lambda function</strong> mà bạn muốn xem. Vào thẻ <strong>Monitor,</strong> ở phần Metrics, chúng ta có thể xem các metrics của function. Xem minh họa ở hình bên dưới.</p>
+<p><img src="/images/6.test/6.2-logmonitor/6.2-5.png" alt="VPC"></p>
+<p>Tiếp theo, chúng ta sẽ thêm tính năng mới vào ứng dụng web của chúng ta với Amazon Rekognition.</p>
 
 
 
@@ -1210,6 +1309,41 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
         
@@ -1222,7 +1356,7 @@
 			<a class="nav nav-prev" href="/vi/6-test/6.1-dynamodb/" title="Quản lí dữ liệu trong DynamoDB"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/6-test/6.1-dynamodb/" title="Quản lí dữ liệu trong DynamoDB" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/7-rekognition/" title="Cấu hình cho trích xuất metadata từ hình ảnh: Amazon Rekognition" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1232,19 +1366,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1689690923"></script>
-    <script src="/js/perfect-scrollbar.min.js?1689690923"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1689690923"></script>
-    <script src="/js/jquery.sticky.js?1689690923"></script>
-    <script src="/js/featherlight.min.js?1689690923"></script>
-    <script src="/js/highlight.pack.js?1689690923"></script>
+    <script src="/js/clipboard.min.js?1689749062"></script>
+    <script src="/js/perfect-scrollbar.min.js?1689749062"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1689749062"></script>
+    <script src="/js/jquery.sticky.js?1689749062"></script>
+    <script src="/js/featherlight.min.js?1689749062"></script>
+    <script src="/js/highlight.pack.js?1689749062"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1689690923"></script>
-    <script src="/js/learn.js?1689690923"></script>
-    <script src="/js/hugo-learn.js?1689690923"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1689749062"></script>
+    <script src="/js/learn.js?1689749062"></script>
+    <script src="/js/hugo-learn.js?1689749062"></script>
 
-    <link href="/mermaid/mermaid.css?1689690923" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1689690923"></script>
+    <link href="/mermaid/mermaid.css?1689749062" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1689749062"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

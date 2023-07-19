@@ -68,8 +68,6 @@
   </url><url>
     <loc>/vi/5-deploy/5.2-configapigateway/</loc>
   </url><url>
-    <loc>/vi/6-test/6.2-logandmonitor/</loc>
-  </url><url>
     <loc>/vi/2-prerequiste/2.2-ensurenodejsversion/</loc>
     <xhtml:link
                 rel="alternate"
@@ -81,6 +79,8 @@
                 hreflang="vi"
                 href="/vi/2-prerequiste/2.2-ensurenodejsversion/"
                 />
+  </url><url>
+    <loc>/vi/6-test/6.2-logandmonitor/</loc>
   </url><url>
     <loc>/vi/3-serverlessbackend/3.2-lambdafunction/</loc>
     <xhtml:link
@@ -172,6 +172,30 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/6-test/"
+                />
+  </url><url>
+    <loc>/vi/7-rekognition/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/7-rekognition/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/7-rekognition/"
+                />
+  </url><url>
+    <loc>/vi/8-terminate/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/8-terminate/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/8-terminate/"
                 />
   </url><url>
     <loc>/vi/categories/</loc>

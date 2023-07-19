@@ -215,4 +215,61 @@ Chúng sẽ làm như hình dưới đây:
 
 Chú ý ở thuộc tính **ObjectCreatedEvent.** Event này sẽ trigger Lambda function khi một object được tải lên bucket.
 
-#### Deploy sau khi thay đổi
+#### Deploy lại ứng dụng sau khi thay đổi
+
+Với sự thay đổi code của chúng ta khi chỉnh sửa file **template.yml** và thêm file **detectLabels.js,** chúng ta cần build và deploy lại ứng dụng để thực thi các thay đổi. Chúng ta sẽ deploy chạy lệnh sau:
+
+{{% notice warning %}}
+
+Hãy chắn chắn rằng ở terminal, bạn đang ở thư mục **sam**, chạy câu lệnh này `cd ~/environment/serverless-tasks-webapp/sam
+`
+
+{{%/notice%}}
+
+Đầu tiên chúng ta sẽ build ứng dụng:
+
+```
+sam build
+```
+
+Khi build thành công, chúng ta sẽ thấy như hình:
+![VPC](/images/7.rekog/7-2.png)
+
+Tiếp đến, chúng ta sẽ deploy ứng dụng:
+
+```
+sam deploy
+```
+
+Sau khi deploy thành công, chúng ta sẽ thấy như hình
+
+![VPC](/images/7.rekog/7-3.png)
+
+Bây giờ, chúng ta đã có thể trải nghiệm Amazon Rekognition ở ứng dụng của chúng ta.
+
+Amazon Rekognition sẽ phân tích các hình ảnh được lưu trữ ở Amazon S3 bucket. Ứng dụng web của chúng ta cho phép bạn được tải ảnh lên và gán vào task. Chúng ta làm như sau:
+
+1. Sau khi các bạn tạo một task mới, ở phàn **My Tasks**, các bạn sẽ thấy nó và nút **Choose file.** Click vào nút đó để chọn một ảnh từ máy tính của bạn có đuôi PNG, JPEG, etc.
+2. Click vào nút **Upload** để tải anh lên.
+
+![VPC](/images/7.rekog/7-4.png)
+
+Sau khi làm các bước trên, bạn sẽ thấy dòng hiển thị quá trình **Detecting Labels.**
+
+![VPC](/images/7.rekog/7-5.png)
+
+Sau khi quá trình detect hoàn tất, bạn sẽ thấy các label được detect hiển thị.
+
+![VPC](/images/7.rekog/7-6.png)
+
+#### Mô tả lại quá trình detect label vừa thực hiện
+
+![VPC](/images/7.rekog/swimlane.svg)
+
+1. Hình ảnh được tải lên vào S3 bucket
+2. S3 bucket được cấu hình cho phép trigger Lambda function **DetectLabels** khi có object được tạo ra trong bucket.
+3. Lambda function **DetectLabels** được gọi và nó sử dụng Amazon Rekognition để detect label của hình ảnh.
+4. Detected lables được lưu vào DynamoDB.
+5. Ứng dựng refreshes thông tin chi tiết của task.
+
+Để ý rằng cách chúng ta thêm một tính năng mới vào ứng dụng của chúng ta mà không thay đổi quá nhiều. Điều này chứng tỏ sự linh hoạt của serverless architectures - khả năng mở rộng và tính module hóa của nó.

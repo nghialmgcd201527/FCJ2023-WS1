@@ -134,6 +134,30 @@
                 href="/4-apigateway/"
                 />
   </url><url>
+    <loc>/7-rekognition/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/7-rekognition/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/7-rekognition/"
+                />
+  </url><url>
+    <loc>/8-terminate/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/8-terminate/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/8-terminate/"
+                />
+  </url><url>
     <loc>/5-deploy/</loc>
     <xhtml:link
                 rel="alternate"

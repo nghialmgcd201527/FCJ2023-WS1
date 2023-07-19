@@ -12,21 +12,21 @@
     <title>Cấu hình cho trích xuất metadata từ hình ảnh: Amazon Rekognition :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1689749062" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1689749062" rel="stylesheet">
-    <link href="/css/hybrid.css?1689749062" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1689749062" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1689749062" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689749062" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1689749062" rel="stylesheet">
-    <link href="/css/theme.css?1689749062" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1689749062" rel="stylesheet">
+    <link href="/css/nucleus.css?1689760235" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1689760235" rel="stylesheet">
+    <link href="/css/hybrid.css?1689760235" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1689760235" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1689760235" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689760235" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1689760235" rel="stylesheet">
+    <link href="/css/theme.css?1689760235" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1689760235" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1689749062" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1689760235" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1689749062"></script>
+    <script src="/js/jquery-3.3.1.min.js?1689760235"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1689749062"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1689749062"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1689760235"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1689760235"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1689749062"></script>
+<script type="text/javascript" src="/js/search.js?1689760235"></script>
 
     
   </div>
@@ -584,13 +584,13 @@
  
   
     
-    <li data-nav-id="/vi/6-test/" title="Kiểm tra ứng dụng" class="dd-item 
+    <li data-nav-id="/vi/6-test/" title="Chạy thử ứng dụng" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-test/">
-           <b> 6. </b> Kiểm tra ứng dụng
+           <b> 6. </b> Chạy thử ứng dụng
           
             <i class="fas fa-check read-icon"></i>
           
@@ -816,9 +816,9 @@
         <br>
             <b> Team </b> <br>
            
-            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
                 <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
-                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
+                <a href="#"  style="color:orange">Hoàng Kha</a> <br>
+                <a href="https://www.linkedin.com/in/l%C3%AA-ngh%C4%A9a-43075a197/"  style="color:orange">Minh nghĩa</a>
                
         </i>
         </left>
@@ -859,7 +859,7 @@
             
           
           
-            <a href='/vi/'>Session Management</a> > Cấu hình cho trích xuất metadata từ hình ảnh: Amazon Rekognition
+            <a href='/vi/'>Serverless Application</a> > Cấu hình cho trích xuất metadata từ hình ảnh: Amazon Rekognition
           
         
           
@@ -1100,14 +1100,14 @@ exports.handler = async (event) =&gt; {
 <p>Bây giờ, chúng ta đã có thể trải nghiệm Amazon Rekognition ở ứng dụng của chúng ta.</p>
 <p>Amazon Rekognition sẽ phân tích các hình ảnh được lưu trữ ở Amazon S3 bucket. Ứng dụng web của chúng ta cho phép bạn được tải ảnh lên và gán vào task. Chúng ta làm như sau:</p>
 <ol>
-<li>Sau khi các bạn tạo một task mới, ở phàn <strong>My Tasks</strong>, các bạn sẽ thấy nó và nút <strong>Choose file.</strong> Click vào nút đó để chọn một ảnh từ máy tính của bạn có đuôi PNG, JPEG, etc.</li>
-<li>Click vào nút <strong>Upload</strong> để tải anh lên.</li>
+<li>Sau khi các bạn tạo một task mới, ở phần <strong>My Tasks</strong>, các bạn sẽ thấy nó và nút <strong>Choose file.</strong> Click vào nút đó để chọn một ảnh từ máy tính của bạn có đuôi PNG, JPEG, etc.</li>
+<li>Click vào nút <strong>Upload</strong> để tải ảnh lên.</li>
 </ol>
-<p><img src="/images/7.rekog/7-4.png" alt="VPC"></p>
+<p><img src="/images/7.rekog/7-4new.png" alt="VPC"></p>
 <p>Sau khi làm các bước trên, bạn sẽ thấy dòng hiển thị quá trình <strong>Detecting Labels.</strong></p>
-<p><img src="/images/7.rekog/7-5.png" alt="VPC"></p>
+<p><img src="/images/7.rekog/7-5new.png" alt="VPC"></p>
 <p>Sau khi quá trình detect hoàn tất, bạn sẽ thấy các label được detect hiển thị.</p>
-<p><img src="/images/7.rekog/7-6.png" alt="VPC"></p>
+<p><img src="/images/7.rekog/7-6new.png" alt="VPC"></p>
 <h4 id="mô-tả-lại-quá-trình-detect-label-vừa-thực-hiện">Mô tả lại quá trình detect label vừa thực hiện</h4>
 <p><img src="/images/7.rekog/swimlane.svg" alt="VPC"></p>
 <ol>
@@ -1542,19 +1542,19 @@ exports.handler = async (event) =&gt; {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1689749062"></script>
-    <script src="/js/perfect-scrollbar.min.js?1689749062"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1689749062"></script>
-    <script src="/js/jquery.sticky.js?1689749062"></script>
-    <script src="/js/featherlight.min.js?1689749062"></script>
-    <script src="/js/highlight.pack.js?1689749062"></script>
+    <script src="/js/clipboard.min.js?1689760235"></script>
+    <script src="/js/perfect-scrollbar.min.js?1689760235"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1689760235"></script>
+    <script src="/js/jquery.sticky.js?1689760235"></script>
+    <script src="/js/featherlight.min.js?1689760235"></script>
+    <script src="/js/highlight.pack.js?1689760235"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1689749062"></script>
-    <script src="/js/learn.js?1689749062"></script>
-    <script src="/js/hugo-learn.js?1689749062"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1689760235"></script>
+    <script src="/js/learn.js?1689760235"></script>
+    <script src="/js/hugo-learn.js?1689760235"></script>
 
-    <link href="/mermaid/mermaid.css?1689749062" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1689749062"></script>
+    <link href="/mermaid/mermaid.css?1689760235" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1689760235"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -249,18 +249,18 @@ Bây giờ, chúng ta đã có thể trải nghiệm Amazon Rekognition ở ứn
 
 Amazon Rekognition sẽ phân tích các hình ảnh được lưu trữ ở Amazon S3 bucket. Ứng dụng web của chúng ta cho phép bạn được tải ảnh lên và gán vào task. Chúng ta làm như sau:
 
-1. Sau khi các bạn tạo một task mới, ở phàn **My Tasks**, các bạn sẽ thấy nó và nút **Choose file.** Click vào nút đó để chọn một ảnh từ máy tính của bạn có đuôi PNG, JPEG, etc.
-2. Click vào nút **Upload** để tải anh lên.
+1. Sau khi các bạn tạo một task mới, ở phần **My Tasks**, các bạn sẽ thấy nó và nút **Choose file.** Click vào nút đó để chọn một ảnh từ máy tính của bạn có đuôi PNG, JPEG, etc.
+2. Click vào nút **Upload** để tải ảnh lên.
 
-![VPC](/images/7.rekog/7-4.png)
+![VPC](/images/7.rekog/7-4new.png)
 
 Sau khi làm các bước trên, bạn sẽ thấy dòng hiển thị quá trình **Detecting Labels.**
 
-![VPC](/images/7.rekog/7-5.png)
+![VPC](/images/7.rekog/7-5new.png)
 
 Sau khi quá trình detect hoàn tất, bạn sẽ thấy các label được detect hiển thị.
 
-![VPC](/images/7.rekog/7-6.png)
+![VPC](/images/7.rekog/7-6new.png)
 
 #### Mô tả lại quá trình detect label vừa thực hiện
 

@@ -46,7 +46,7 @@
 	"title": "Session Management",
 	"tags": [],
 	"description": "",
-	"content": "Work with Amazon System Manager - Session Manager Overall In this lab, you\u0026rsquo;ll learn the basics and practice of Amazon System Manager - Session Manager . Perform creating public and private instance connections.\nContent Introduction Preparation Connect to EC2 instance Manage session logs Port Forwarding Clean up resources "
+	"content": "Deploy \u0026ldquo;Todo app\u0026rdquo; with Serverless Overall In this lab, you\u0026rsquo;ll learn the basics and practice of Amazon System Manager - Session Manager . Perform creating public and private instance connections.\nContent Introduction Preparation Connect to EC2 instance Manage session logs Port Forwarding Clean up resources "
 },
 {
 	"uri": "/3-serverlessbackend/3.2-lambdafunction/",

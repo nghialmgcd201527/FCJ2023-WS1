@@ -12,7 +12,7 @@ Cách đơn giản nhất để xóa resources được tạo ra bởi SAM là s
 
 Bạn hãy sử dụng câu lệnh `aws s3 ls` để thấy được danh sách cái file trong bucket. Hãy làm như hình.
 
-![VPC](/images/8.clean/8-1.png)
+![VPC](/images/8.clean/8-1new.png)
 
 Bạn sẽ thấy bucket tên **uploads-tasks-app-ap-southeast-1-127779471063** trong đó **ap-southeast-1** là region của bạn và **127779471063** là ID của AWS account.
 
@@ -61,4 +61,6 @@ Các bạn hãy nhớ vào IAM console, chọn user **amplify-user** được t�
 
 Bạn phải xóa các nhóm log trong CloudWatch Logs và streams được tạo ra khi sử dụng ứng dụng. Hãy vào **CloudWatch Logs** console, tiếp theo vào **Log groups** ở thanh điều hướng bên trái, chọn các Log group của workshop này và xóa chúng.
 
-![VPC](/images/8.clean/8-5.png)
+![VPC](/images/8.clean/8-5new.png)
+
+Vậy là chúng ta đã dọn dẹp tất cả tài nguyên trong workshop này.

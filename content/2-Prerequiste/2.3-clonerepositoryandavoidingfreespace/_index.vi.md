@@ -44,7 +44,7 @@ df -h
 
 Chúng ta sẽ nhận được kết quả như hình bên dưới:
 
-![VPC](/images/2.prerequisite/2.3-clonerepo/clonerepo-3.png)
+![VPC](/images/2.prerequisite/2.3-clonerepo/2.3-3.png)
 
 filesystem ở đường dẫn /dev/nvme0n1p1 là volume mà chúng ta đang sử dụng. Chúng ta sẽ thấy dung lượng trống của volume này là 3.5G. Để tránh tình trạng hết dung lượng trong suốt buổi workshop, chúng ta sẽ tăng dung lượng của volume này lên 20G.
 
@@ -66,6 +66,6 @@ df -h
 
 ```
 
-![VPC](/images/2.prerequisite/2.3-clonerepo/clonerepo-5.png)
+![VPC](/images/2.prerequisite/2.3-clonerepo/2.3-5.png)
 
 Như chúng ta thấy ở đường dẫn /dev/nvme0n1p1, dung lượng trống của volume hiện tại đã tăng lên 14G.

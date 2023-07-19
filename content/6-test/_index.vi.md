@@ -1,5 +1,5 @@
 ---
-title: "Kiểm tra ứng dụng"
+title: "Chạy thử ứng dụng"
 date: "`r Sys.Date()`"
 weight: 6
 chapter: false

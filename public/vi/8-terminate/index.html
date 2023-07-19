@@ -12,21 +12,21 @@
     <title>Dọn dẹp tài nguyên :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1689749062" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1689749062" rel="stylesheet">
-    <link href="/css/hybrid.css?1689749062" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1689749062" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1689749062" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689749062" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1689749062" rel="stylesheet">
-    <link href="/css/theme.css?1689749062" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1689749062" rel="stylesheet">
+    <link href="/css/nucleus.css?1689760235" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1689760235" rel="stylesheet">
+    <link href="/css/hybrid.css?1689760235" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1689760235" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1689760235" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689760235" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1689760235" rel="stylesheet">
+    <link href="/css/theme.css?1689760235" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1689760235" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1689749062" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1689760235" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1689749062"></script>
+    <script src="/js/jquery-3.3.1.min.js?1689760235"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1689749062"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1689749062"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1689760235"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1689760235"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1689749062"></script>
+<script type="text/javascript" src="/js/search.js?1689760235"></script>
 
     
   </div>
@@ -584,13 +584,13 @@
  
   
     
-    <li data-nav-id="/vi/6-test/" title="Kiểm tra ứng dụng" class="dd-item 
+    <li data-nav-id="/vi/6-test/" title="Chạy thử ứng dụng" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-test/">
-           <b> 6. </b> Kiểm tra ứng dụng
+           <b> 6. </b> Chạy thử ứng dụng
           
             <i class="fas fa-check read-icon"></i>
           
@@ -816,9 +816,9 @@
         <br>
             <b> Team </b> <br>
            
-            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
                 <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
-                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
+                <a href="#"  style="color:orange">Hoàng Kha</a> <br>
+                <a href="https://www.linkedin.com/in/l%C3%AA-ngh%C4%A9a-43075a197/"  style="color:orange">Minh nghĩa</a>
                
         </i>
         </left>
@@ -859,7 +859,7 @@
             
           
           
-            <a href='/vi/'>Session Management</a> > Dọn dẹp tài nguyên
+            <a href='/vi/'>Serverless Application</a> > Dọn dẹp tài nguyên
           
         
           
@@ -905,7 +905,7 @@
 	<h4 id="sam-created-resources">SAM-created Resources</h4>
 <p>Cách đơn giản nhất để xóa resources được tạo ra bởi SAM là sử dụng câu lệnh <code>sam delete</code>. Tuy nhiên, trước khi chạy câu lệnh đó, bạn cần chắn chắn rằng S3 bucket chứa hình ảnh tải lên đã được dọn dẹp sạch.</p>
 <p>Bạn hãy sử dụng câu lệnh <code>aws s3 ls</code> để thấy được danh sách cái file trong bucket. Hãy làm như hình.</p>
-<p><img src="/images/8.clean/8-1.png" alt="VPC"></p>
+<p><img src="/images/8.clean/8-1new.png" alt="VPC"></p>
 <p>Bạn sẽ thấy bucket tên <strong>uploads-tasks-app-ap-southeast-1-127779471063</strong> trong đó <strong>ap-southeast-1</strong> là region của bạn và <strong>127779471063</strong> là ID của AWS account.</p>
 <p>Hãy đi đến thư mục <strong>/sam</strong> bằng câu lệnh <code>cd ~/environment/serverless-tasks-webapp/sam</code>. Bucket của workshop này được kích hoạt versioning nên bạn phải dọn dẹp nó bằng AWS SDK. Tìm đến file <strong>emtpy_versioned_bucket.py</strong> trong thư mục <strong>/sam</strong> và modify nó bằng cách chỉnh sửa tên bucket trên sau khi chạy câu lệnh <code>aws s3 ls</code>. Lưu lại file và chạy câu lệnh sau để dọn dẹp bucket:</p>
 <pre tabindex="0"><code>python empty_versioned_bucket.py
@@ -927,7 +927,8 @@ amplify delete
 
 <h4 id="cloudwatch-logs">CloudWatch Logs</h4>
 <p>Bạn phải xóa các nhóm log trong CloudWatch Logs và streams được tạo ra khi sử dụng ứng dụng. Hãy vào <strong>CloudWatch Logs</strong> console, tiếp theo vào <strong>Log groups</strong> ở thanh điều hướng bên trái, chọn các Log group của workshop này và xóa chúng.</p>
-<p><img src="/images/8.clean/8-5.png" alt="VPC"></p>
+<p><img src="/images/8.clean/8-5new.png" alt="VPC"></p>
+<p>Vậy là chúng ta đã dọn dẹp tất cả tài nguyên trong workshop này.</p>
 
 
 
@@ -1349,19 +1350,19 @@ amplify delete
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1689749062"></script>
-    <script src="/js/perfect-scrollbar.min.js?1689749062"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1689749062"></script>
-    <script src="/js/jquery.sticky.js?1689749062"></script>
-    <script src="/js/featherlight.min.js?1689749062"></script>
-    <script src="/js/highlight.pack.js?1689749062"></script>
+    <script src="/js/clipboard.min.js?1689760235"></script>
+    <script src="/js/perfect-scrollbar.min.js?1689760235"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1689760235"></script>
+    <script src="/js/jquery.sticky.js?1689760235"></script>
+    <script src="/js/featherlight.min.js?1689760235"></script>
+    <script src="/js/highlight.pack.js?1689760235"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1689749062"></script>
-    <script src="/js/learn.js?1689749062"></script>
-    <script src="/js/hugo-learn.js?1689749062"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1689760235"></script>
+    <script src="/js/learn.js?1689760235"></script>
+    <script src="/js/hugo-learn.js?1689760235"></script>
 
-    <link href="/mermaid/mermaid.css?1689749062" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1689749062"></script>
+    <link href="/mermaid/mermaid.css?1689760235" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1689760235"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

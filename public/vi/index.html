@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Session Management :: AWS System Manager</title>
+    <title>Serverless Application :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1689749062" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1689749062" rel="stylesheet">
-    <link href="/css/hybrid.css?1689749062" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1689749062" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1689749062" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689749062" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1689749062" rel="stylesheet">
-    <link href="/css/theme.css?1689749062" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1689749062" rel="stylesheet">
+    <link href="/css/nucleus.css?1689760235" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1689760235" rel="stylesheet">
+    <link href="/css/hybrid.css?1689760235" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1689760235" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1689760235" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689760235" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1689760235" rel="stylesheet">
+    <link href="/css/theme.css?1689760235" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1689760235" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1689749062" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1689760235" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1689749062"></script>
+    <script src="/js/jquery-3.3.1.min.js?1689760235"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1689749062"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1689749062"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1689760235"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1689760235"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1689749062"></script>
+<script type="text/javascript" src="/js/search.js?1689760235"></script>
 
     
   </div>
@@ -584,13 +584,13 @@
  
   
     
-    <li data-nav-id="/vi/6-test/" title="Kiểm tra ứng dụng" class="dd-item 
+    <li data-nav-id="/vi/6-test/" title="Chạy thử ứng dụng" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-test/">
-           <b> 6. </b> Kiểm tra ứng dụng
+           <b> 6. </b> Chạy thử ứng dụng
           
             <i class="fas fa-check read-icon"></i>
           
@@ -816,9 +816,9 @@
         <br>
             <b> Team </b> <br>
            
-            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
                 <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
-                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
+                <a href="#"  style="color:orange">Hoàng Kha</a> <br>
+                <a href="https://www.linkedin.com/in/l%C3%AA-ngh%C4%A9a-43075a197/"  style="color:orange">Minh nghĩa</a>
                
         </i>
         </left>
@@ -857,11 +857,13 @@
 <h3 id="nội-dung">Nội dung</h3>
 <ol>
 <li><a href="1-introduce/">Giới thiệu</a></li>
-<li><a href="2-Prerequiste/">Các bước chuẩn bị</a></li>
-<li><a href="3-Accessibilitytoinstance/">Tạo kết nối đến máy chủ EC2</a></li>
-<li><a href="4-s3log/">Quản lý session logs</a></li>
-<li><a href="5-Portfwd/">Port Forwarding</a></li>
-<li><a href="6-cleanup/">Dọn dẹp tài nguyên</a></li>
+<li><a href="2-prerequiste/">Các bước chuẩn bị</a></li>
+<li><a href="3-serverlessbackend/">Xây dựng một serverless backend với AWS Lambda và AWS SAM</a></li>
+<li><a href="4-apigateway/">Cấu hình cho API authorization: API Gateway</a></li>
+<li><a href="5-deploy/">Build và deploy ứng dụng web: AWS Amplify</a></li>
+<li><a href="6-test/">Chạy thử ứng dụng</a></li>
+<li><a href="7-rekognition/">Cấu hình cho trính xuất metadata từ hình ảnh: Amazon Rekognition</a></li>
+<li><a href="8-terminate/">Dọn dẹp tài nguyên</a></li>
 </ol>
 	
   
@@ -1274,19 +1276,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1689749062"></script>
-    <script src="/js/perfect-scrollbar.min.js?1689749062"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1689749062"></script>
-    <script src="/js/jquery.sticky.js?1689749062"></script>
-    <script src="/js/featherlight.min.js?1689749062"></script>
-    <script src="/js/highlight.pack.js?1689749062"></script>
+    <script src="/js/clipboard.min.js?1689760235"></script>
+    <script src="/js/perfect-scrollbar.min.js?1689760235"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1689760235"></script>
+    <script src="/js/jquery.sticky.js?1689760235"></script>
+    <script src="/js/featherlight.min.js?1689760235"></script>
+    <script src="/js/highlight.pack.js?1689760235"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1689749062"></script>
-    <script src="/js/learn.js?1689749062"></script>
-    <script src="/js/hugo-learn.js?1689749062"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1689760235"></script>
+    <script src="/js/learn.js?1689760235"></script>
+    <script src="/js/hugo-learn.js?1689760235"></script>
 
-    <link href="/mermaid/mermaid.css?1689749062" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1689749062"></script>
+    <link href="/mermaid/mermaid.css?1689760235" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1689760235"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

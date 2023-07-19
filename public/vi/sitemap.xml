@@ -160,8 +160,6 @@
   </url><url>
     <loc>/vi/5-deploy/5.5-amplifyhosting/</loc>
   </url><url>
-    <loc>/vi/5-deploy/5.6-deployapp/</loc>
-  </url><url>
     <loc>/vi/6-test/</loc>
     <xhtml:link
                 rel="alternate"
@@ -173,6 +171,8 @@
                 hreflang="vi"
                 href="/vi/6-test/"
                 />
+  </url><url>
+    <loc>/vi/5-deploy/5.6-deployapp/</loc>
   </url><url>
     <loc>/vi/7-rekognition/</loc>
     <xhtml:link

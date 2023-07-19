@@ -18,21 +18,21 @@ Các nhóm log là một phần tiêu chuẩn của CloudWatch và được dùn
 
 1. Nhập **CloudWatch** ở thanh tìm kiếm service trên AWS Console sau đó chọn **CloudWatch**.
 
-![VPC](/images/6.test/6.2-logmonitor/6.2-1.png)
+![VPC](/images/6.test/6.2-logmonitor/6.2-1new.png)
 
 2. Ở thanh điều hướng bên trái, chọn **Log groups.**
 
-![VPC](/images/6.test/6.2-logmonitor/6.2-2.png)
+![VPC](/images/6.test/6.2-logmonitor/6.2-2new.png)
 
 3. Chọn log group với function **CreateTaskFunction**.
 
-![VPC](/images/6.test/6.2-logmonitor/6.2-3.png)
+![VPC](/images/6.test/6.2-logmonitor/6.2-3new.png)
 
 Mỗi phiên bản của một Lambda function có một stream log riêng. Nếu một function được mở rộng thì phiên bản mới đó đồng thời có log stream riêng. Mỗi khi một environment được chọn để thực thi và một environment mới được tạo ra để đáp ứng một lượng invocation nhất định và nó sẽ tạo ra một log stream mới. Cách đặt tên cho các log streams là `YYYY/MM//DD [Function version] [Execution environment GUID]`
 
 Ví dụ, đây là log stream của function **CreateTaskFunction**.
 
-![VPC](/images/6.test/6.2-logmonitor/6.2-4.png)
+![VPC](/images/6.test/6.2-logmonitor/6.2-4new.png)
 
 Trong những logs trên này có:
 
@@ -58,6 +58,6 @@ Tất cả Lambda functions tự động tích hợp với CloudWatch. Lambda t�
 
 Để có thể vào xem **Mornitor**, hãy vào **Lambda** console, chọn **Lambda function** mà bạn muốn xem. Vào thẻ **Monitor,** ở phần Metrics, chúng ta có thể xem các metrics của function. Xem minh họa ở hình bên dưới.
 
-![VPC](/images/6.test/6.2-logmonitor/6.2-5.png)
+![VPC](/images/6.test/6.2-logmonitor/6.2-5new.png)
 
 Tiếp theo, chúng ta sẽ thêm tính năng mới vào ứng dụng web của chúng ta với Amazon Rekognition.

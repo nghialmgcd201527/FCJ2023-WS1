@@ -12,21 +12,21 @@
     <title>Cài đặt Amplify CLI :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1689749062" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1689749062" rel="stylesheet">
-    <link href="/css/hybrid.css?1689749062" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1689749062" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1689749062" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689749062" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1689749062" rel="stylesheet">
-    <link href="/css/theme.css?1689749062" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1689749062" rel="stylesheet">
+    <link href="/css/nucleus.css?1689760235" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1689760235" rel="stylesheet">
+    <link href="/css/hybrid.css?1689760235" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1689760235" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1689760235" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689760235" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1689760235" rel="stylesheet">
+    <link href="/css/theme.css?1689760235" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1689760235" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1689749062" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1689760235" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1689749062"></script>
+    <script src="/js/jquery-3.3.1.min.js?1689760235"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1689749062"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1689749062"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1689760235"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1689760235"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1689749062"></script>
+<script type="text/javascript" src="/js/search.js?1689760235"></script>
 
     
   </div>
@@ -584,13 +584,13 @@
  
   
     
-    <li data-nav-id="/vi/6-test/" title="Kiểm tra ứng dụng" class="dd-item 
+    <li data-nav-id="/vi/6-test/" title="Chạy thử ứng dụng" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-test/">
-           <b> 6. </b> Kiểm tra ứng dụng
+           <b> 6. </b> Chạy thử ứng dụng
           
             <i class="fas fa-check read-icon"></i>
           
@@ -816,9 +816,9 @@
         <br>
             <b> Team </b> <br>
            
-            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
                 <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
-                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
+                <a href="#"  style="color:orange">Hoàng Kha</a> <br>
+                <a href="https://www.linkedin.com/in/l%C3%AA-ngh%C4%A9a-43075a197/"  style="color:orange">Minh nghĩa</a>
                
         </i>
         </left>
@@ -863,7 +863,7 @@
             
           
           
-            <a href='/vi/'>Session Management</a> > <a href='/vi/2-prerequiste/'>Các bước chuẩn bị</a> > Cài đặt Amplify CLI
+            <a href='/vi/'>Serverless Application</a> > <a href='/vi/2-prerequiste/'>Các bước chuẩn bị</a> > Cài đặt Amplify CLI
           
         
           
@@ -916,21 +916,21 @@
 </code></pre><p>Chúng ta sẽ nhận được một đường dẫn <strong><a href="https://console.aws.amazon.com/">https://console.aws.amazon.com/</a></strong> để đăng nhập vào AWS console.</p>
 <p><img src="/images/2.prerequisite/2.4-amplifycli/2.4-2.png" alt="VPC"></p>
 <p>Sau khi đăng nhập, nhấn <strong>Enter</strong> và chọn <strong>Region</strong> mà bạn đang làm workshop, với mình là <strong>ap-southeast-1.</strong> Sau đó nhấn <strong>Enter</strong> để tiếp tục, chúng ta sẽ nhận được một đường dẫn <strong><a href="https://console.aws.amazon.com/iamv2/home#/users/create">https://console.aws.amazon.com/iamv2/home#/users/create</a></strong> để tạo một user IAM mới.</p>
-<p><img src="/images/2.prerequisite/2.4-amplifycli/2.4-3.png" alt="VPC"></p>
+<p><img src="/images/2.prerequisite/2.4-amplifycli/2.4-3new.png" alt="VPC"></p>
 <p>Truy cập vào đường dẫn trên, đặt tên <strong>amplify-user</strong> cho user đó, chọn <strong>Next.</strong></p>
-<p><img src="/images/2.prerequisite/2.4-amplifycli/2.4-4.png" alt="VPC"></p>
+<p><img src="/images/2.prerequisite/2.4-amplifycli/2.4-4new.png" alt="VPC"></p>
 
 <div class="notices note" ><p>Mặc định, chúng ta sẽ gán quyền <strong>AdministratorAccess</strong> cho user được cấu hình cho Amplify CLI</p>
 </div>
 
 <p>Ở section <strong>Permmissions options</strong>, chọn <strong>Attach policies directly.</strong> Tìm và chọn <strong>AdministratorAccess</strong>. Sau đó nhấn <strong>Next.</strong> Ở trang <strong>Review and create,</strong> chọn <strong>Create user.</strong></p>
-<p><img src="/images/2.prerequisite/2.4-amplifycli/2.4-5.png" alt="VPC"></p>
+<p><img src="/images/2.prerequisite/2.4-amplifycli/2.4-5new.png" alt="VPC"></p>
 <p>Tiếp theo, chọn user vừa được tạo <strong>amplify-user,</strong> chọn tab <strong>Security credentials,</strong> ở mục <strong>Access keys,</strong> click vào <strong>Create access key.</strong></p>
-<p><img src="/images/2.prerequisite/2.4-amplifycli/2.4-6.png" alt="VPC"></p>
+<p><img src="/images/2.prerequisite/2.4-amplifycli/2.4-6new.png" alt="VPC"></p>
 <p>Ở bước <strong>Access key best practices &amp; alternatives,</strong> chọn <strong>Command Line Interface (CLI)</strong> và tick vào mục <strong>Confirm</strong> sau đó chọn <strong>Next.</strong></p>
 <p><img src="/images/2.prerequisite/2.4-amplifycli/2.4-7.png" alt="VPC"></p>
 <p>Ở trang <strong>Set description tag,</strong> hãy nhập mô tả cho <strong>Access key</strong> tùy theo ý của bạn, mình để mặc định và chọn <strong>Create access key.</strong> Vậy là bạn đã tạo thành công <strong>Access key</strong> cho user <strong>amplify-user,</strong> lưu lại <strong>Access key</strong> và <strong>Secret access key.</strong> Quay trở lại terminal ở Cloud9, nhấn <strong>Enter,</strong> nó sẽ yêu cầu mình nhập <strong>Access key</strong> và <strong>Secret access key</strong> vừa tạo. Sau khi nhập xong, nhấn <strong>Enter,</strong> ở mục <strong>Profile name,</strong> mình sẽ để default, nhấn tiếp <strong>Enter,</strong> vậy là đã cấu hình thành công Amplify CLI.</p>
-<p><img src="/images/2.prerequisite/2.4-amplifycli/2.4-8.png" alt="VPC"></p>
+<p><img src="/images/2.prerequisite/2.4-amplifycli/2.4-8new.png" alt="VPC"></p>
 <p>Bây giờ chúng ta đã sẵn sàng để sử dụng Amplify!</p>
 
 
@@ -1360,19 +1360,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1689749062"></script>
-    <script src="/js/perfect-scrollbar.min.js?1689749062"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1689749062"></script>
-    <script src="/js/jquery.sticky.js?1689749062"></script>
-    <script src="/js/featherlight.min.js?1689749062"></script>
-    <script src="/js/highlight.pack.js?1689749062"></script>
+    <script src="/js/clipboard.min.js?1689760235"></script>
+    <script src="/js/perfect-scrollbar.min.js?1689760235"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1689760235"></script>
+    <script src="/js/jquery.sticky.js?1689760235"></script>
+    <script src="/js/featherlight.min.js?1689760235"></script>
+    <script src="/js/highlight.pack.js?1689760235"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1689749062"></script>
-    <script src="/js/learn.js?1689749062"></script>
-    <script src="/js/hugo-learn.js?1689749062"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1689760235"></script>
+    <script src="/js/learn.js?1689760235"></script>
+    <script src="/js/hugo-learn.js?1689760235"></script>
 
-    <link href="/mermaid/mermaid.css?1689749062" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1689749062"></script>
+    <link href="/mermaid/mermaid.css?1689760235" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1689760235"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

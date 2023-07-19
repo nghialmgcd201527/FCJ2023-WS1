@@ -16,7 +16,7 @@ Coppy URL của API Gateway endpoint của ứng dụng chúng ta, vào thư m�
 Hãy lưu ý rằng bạn đã coppy bao gồm tên của stage **/v1** trong URL đó và xóa đi dấu **/** ở cuối URL.
 {{% /notice %}}
 
-![VPC](/images/5.deploy/5.2-apigateway/5.2-1.png)
+![VPC](/images/5.deploy/5.2-apigateway/5.2-1new.png)
 
 Dòng `Vue.config.productionTip = false` sẽ tắt các tip được hiển thị trong Vue console, nó sẽ tối ưu hóa trong môi trường production.
 

@@ -66,7 +66,7 @@ Kiểm tra lại thông tin trước khi deploy.
 
 Nếu deploy thành công, chúng ta sẽ thấy output như hình.
 
-![VPC](/images/5.deploy/5.1-serverless/5.1-5.png)
+![VPC](/images/5.deploy/5.1-serverless/5.1-5new.png)
 
 {{% notice note %}}
 Hãy ghi chú và lưu lại giá trị của key **TasksApi** và **S3BucketName,** nó sẽ cần cho những bước tiếp theo.

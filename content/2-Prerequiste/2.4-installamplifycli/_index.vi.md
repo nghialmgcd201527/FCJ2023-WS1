@@ -35,11 +35,11 @@ Chúng ta sẽ nhận được một đường dẫn **https://console.aws.amazo
 
 Sau khi đăng nhập, nhấn **Enter** và chọn **Region** mà bạn đang làm workshop, với mình là **ap-southeast-1.** Sau đó nhấn **Enter** để tiếp tục, chúng ta sẽ nhận được một đường dẫn **https://console.aws.amazon.com/iamv2/home#/users/create** để tạo một user IAM mới.
 
-![VPC](/images/2.prerequisite/2.4-amplifycli/2.4-3.png)
+![VPC](/images/2.prerequisite/2.4-amplifycli/2.4-3new.png)
 
 Truy cập vào đường dẫn trên, đặt tên **amplify-user** cho user đó, chọn **Next.**
 
-![VPC](/images/2.prerequisite/2.4-amplifycli/2.4-4.png)
+![VPC](/images/2.prerequisite/2.4-amplifycli/2.4-4new.png)
 
 {{% notice note  %}}
 Mặc định, chúng ta sẽ gán quyền **AdministratorAccess** cho user được cấu hình cho Amplify CLI
@@ -47,11 +47,11 @@ Mặc định, chúng ta sẽ gán quyền **AdministratorAccess** cho user đư
 
 Ở section **Permmissions options**, chọn **Attach policies directly.** Tìm và chọn **AdministratorAccess**. Sau đó nhấn **Next.** Ở trang **Review and create,** chọn **Create user.**
 
-![VPC](/images/2.prerequisite/2.4-amplifycli/2.4-5.png)
+![VPC](/images/2.prerequisite/2.4-amplifycli/2.4-5new.png)
 
 Tiếp theo, chọn user vừa được tạo **amplify-user,** chọn tab **Security credentials,** ở mục **Access keys,** click vào **Create access key.**
 
-![VPC](/images/2.prerequisite/2.4-amplifycli/2.4-6.png)
+![VPC](/images/2.prerequisite/2.4-amplifycli/2.4-6new.png)
 
 Ở bước **Access key best practices & alternatives,** chọn **Command Line Interface (CLI)** và tick vào mục **Confirm** sau đó chọn **Next.**
 
@@ -59,6 +59,6 @@ Tiếp theo, chọn user vừa được tạo **amplify-user,** chọn tab **Sec
 
 Ở trang **Set description tag,** hãy nhập mô tả cho **Access key** tùy theo ý của bạn, mình để mặc định và chọn **Create access key.** Vậy là bạn đã tạo thành công **Access key** cho user **amplify-user,** lưu lại **Access key** và **Secret access key.** Quay trở lại terminal ở Cloud9, nhấn **Enter,** nó sẽ yêu cầu mình nhập **Access key** và **Secret access key** vừa tạo. Sau khi nhập xong, nhấn **Enter,** ở mục **Profile name,** mình sẽ để default, nhấn tiếp **Enter,** vậy là đã cấu hình thành công Amplify CLI.
 
-![VPC](/images/2.prerequisite/2.4-amplifycli/2.4-8.png)
+![VPC](/images/2.prerequisite/2.4-amplifycli/2.4-8new.png)
 
 Bây giờ chúng ta đã sẵn sàng để sử dụng Amplify!

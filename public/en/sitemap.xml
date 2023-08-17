@@ -26,6 +26,18 @@
                 href="/3-serverlessbackend/3.1-dynamodb/"
                 />
   </url><url>
+    <loc>/5-deploy/5.1-deployserverless/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-deploy/5.1-deployserverless/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-deploy/5.1-deployserverless/"
+                />
+  </url><url>
     <loc>/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
@@ -50,6 +62,30 @@
                 href="/"
                 />
   </url><url>
+    <loc>/6-test/6.1-dynamodb/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-test/6.1-dynamodb/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-test/6.1-dynamodb/"
+                />
+  </url><url>
+    <loc>/5-deploy/5.2-configapigateway/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-deploy/5.2-configapigateway/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-deploy/5.2-configapigateway/"
+                />
+  </url><url>
     <loc>/3-serverlessbackend/3.2-lambdafunction/</loc>
     <xhtml:link
                 rel="alternate"
@@ -72,6 +108,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="/2-prerequiste/2.2-ensurenodejsversion/"
+                />
+  </url><url>
+    <loc>/6-test/6.2-logandmonitor/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-test/6.2-logandmonitor/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-test/6.2-logandmonitor/"
                 />
   </url><url>
     <loc>/2-prerequiste/</loc>
@@ -110,6 +158,30 @@
                 href="/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/"
                 />
   </url><url>
+    <loc>/5-deploy/5.3-initializeamplify/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-deploy/5.3-initializeamplify/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-deploy/5.3-initializeamplify/"
+                />
+  </url><url>
+    <loc>/5-deploy/5.4-buildapp/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-deploy/5.4-buildapp/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-deploy/5.4-buildapp/"
+                />
+  </url><url>
     <loc>/4-apigateway/</loc>
     <xhtml:link
                 rel="alternate"
@@ -134,6 +206,54 @@
                 href="/2-prerequiste/2.4-installamplifycli/"
                 />
   </url><url>
+    <loc>/5-deploy/5.5-amplifyhosting/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-deploy/5.5-amplifyhosting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-deploy/5.5-amplifyhosting/"
+                />
+  </url><url>
+    <loc>/5-deploy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-deploy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-deploy/"
+                />
+  </url><url>
+    <loc>/5-deploy/5.6-deployapp/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-deploy/5.6-deployapp/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-deploy/5.6-deployapp/"
+                />
+  </url><url>
+    <loc>/6-test/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-test/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-test/"
+                />
+  </url><url>
     <loc>/7-rekognition/</loc>
     <xhtml:link
                 rel="alternate"
@@ -156,30 +276,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/8-terminate/"
-                />
-  </url><url>
-    <loc>/5-deploy/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/5-deploy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/5-deploy/"
-                />
-  </url><url>
-    <loc>/6-test/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/6-test/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/6-test/"
                 />
   </url><url>
     <loc>/categories/</loc>

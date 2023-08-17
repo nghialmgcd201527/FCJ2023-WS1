@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/vi/5-deploy/5.1-deployserverless/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-deploy/5.1-deployserverless/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-deploy/5.1-deployserverless/"
+                />
   </url><url>
     <loc>/vi/1-introduce/</loc>
     <xhtml:link
@@ -29,6 +39,16 @@
                 />
   </url><url>
     <loc>/vi/6-test/6.1-dynamodb/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-test/6.1-dynamodb/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-test/6.1-dynamodb/"
+                />
   </url><url>
     <loc>/vi/</loc>
     <xhtml:link
@@ -67,6 +87,16 @@
                 />
   </url><url>
     <loc>/vi/5-deploy/5.2-configapigateway/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-deploy/5.2-configapigateway/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-deploy/5.2-configapigateway/"
+                />
   </url><url>
     <loc>/vi/2-prerequiste/2.2-ensurenodejsversion/</loc>
     <xhtml:link
@@ -81,6 +111,16 @@
                 />
   </url><url>
     <loc>/vi/6-test/6.2-logandmonitor/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-test/6.2-logandmonitor/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-test/6.2-logandmonitor/"
+                />
   </url><url>
     <loc>/vi/3-serverlessbackend/3.2-lambdafunction/</loc>
     <xhtml:link
@@ -107,6 +147,16 @@
                 />
   </url><url>
     <loc>/vi/5-deploy/5.3-initializeamplify/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-deploy/5.3-initializeamplify/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-deploy/5.3-initializeamplify/"
+                />
   </url><url>
     <loc>/vi/3-serverlessbackend/</loc>
     <xhtml:link
@@ -121,6 +171,16 @@
                 />
   </url><url>
     <loc>/vi/5-deploy/5.4-buildapp/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-deploy/5.4-buildapp/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-deploy/5.4-buildapp/"
+                />
   </url><url>
     <loc>/vi/2-prerequiste/2.4-installamplifycli/</loc>
     <xhtml:link
@@ -159,6 +219,16 @@
                 />
   </url><url>
     <loc>/vi/5-deploy/5.5-amplifyhosting/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-deploy/5.5-amplifyhosting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-deploy/5.5-amplifyhosting/"
+                />
   </url><url>
     <loc>/vi/6-test/</loc>
     <xhtml:link
@@ -173,6 +243,16 @@
                 />
   </url><url>
     <loc>/vi/5-deploy/5.6-deployapp/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-deploy/5.6-deployapp/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-deploy/5.6-deployapp/"
+                />
   </url><url>
     <loc>/vi/7-rekognition/</loc>
     <xhtml:link

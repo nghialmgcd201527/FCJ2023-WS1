@@ -36,7 +36,7 @@ Note that not all services are available in all regions. Later in this workshop,
 
 See more Amazon Rekognition [latest updates](https://docs.aws.amazon.com/general/latest/gr/rekognition.html).
 
-### Nội dung
+### Content
 
 - [Create a Cloud9 Workspace](2.1-createcloud9workspace/)
 - [Ensure Node.js Version](2.2-ensurenodejsversion/)

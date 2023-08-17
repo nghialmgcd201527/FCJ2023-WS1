@@ -1,49 +1,56 @@
 ---
-title : "Connect to Public Instance"
-date : "`r Sys.Date()`"
-weight : 1
-chapter : false
-pre : " <b> 3.1. </b> "
+title: "Define a DynamoDB table"
+date: "`r Sys.Date()`"
+weight: 1
+chapter: false
+pre: " <b> 3.1. </b> "
 ---
-![SSMPublicinstance](/images/arc-02.png)
 
-1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home).
-  + Click on **Public Linux Instance**.
-  + Click **Actions**.
-  + Click **Security**.
-  + Click **Modify IAM role**.
+#### What is Amazon DynamoDB?
 
-![Connect](/images/3.connect/001-connect.png)
+[Amazon DynamoDB](https://aws.amazon.com/dynamodb/) is a serverless key-value pair and a type of non-relational (Non-SQL) database that delivers millisecond performance at all sizes.
 
-2. At the Modify IAM role page.
-  + Click to select **SSM-Role**.
-  + Click **Save**.
+Similar to other databases, Amazon DynamoDB stores data in tables. In our application, we will store the information of the tasks in the table of DynamoDB. This table will be accessed by the Lambda function in response to the API from our web application.
 
-{{% notice note %}}
-You will need to wait about 10 minutes before performing the next step. This time our EC2 instance will automatically register with the Session Manager.
+We will use SAM to initialize the DynamoDB table.
+
+#### Add the DynamoDB table to the SAM template
+
+The line `AWS:DynamoDB::Table` is used to define the DynamoDB table.
+
+Go to the `template.yaml` file in the **sam** folder, add the following code in the **Resource** section and below the **MyAuthFunction** function.
+
+```
+# Create DynamoDB table
+  TasksTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: "user"
+          AttributeType: "S"
+        - AttributeName: "id"
+          AttributeType: "S"
+      KeySchema:
+        - AttributeName: "user"
+          KeyType: "HASH"
+        - AttributeName: "id"
+          KeyType: "RANGE"
+      BillingMode: PAY_PER_REQUEST
+
+```
+
+First you will have **AttributeDefinitions** where the attributes (columns) are defined in the DynamoDB table. In our table, there are 2 attributes defined as **users** and **id**. Both are of type **string** (`AttributeType: "S"`).
+
+**KeySchema** defines the primary key of the table. The primary key of the table is a combination of the two attributes **user** and **id**. **user** is the hash key (`KeyType: "HASH"`) and **id** is the range key (`KeyType: "RANGE"`). This indicates that the table will be managed, partitioned based on the **user** and **id** attributes.
+
+**BillingMode: PAY_PER_REQUEST** defines how to pay for that table as payment on demand.
+
+{{% notice warning %}}
+The syntax in YAML is space sensitive, so make sure the scope of the **TasksTable** function is indented deeper than the scope of **Resources.**
 {{% /notice %}}
 
-3. Go to the [AWS Systems Manager service management console](https://console.aws.amazon.com/systems-manager/home)
-  + Drag the left menu slider down.
-  + Click **Session Manager**.
-  + Click **Start Session**.
+We will have the result as shown below.
 
+![VPC](/images/3.serverlessbackend/3.1-dynamodb/3.1-1.png)
 
-![Connect](/images/3.connect/002-connect.png)
-
-
-4. Then select **Public Linux Instance** and click **Start session** to access the instance.
-
-![Connect](/images/3.connect/003-connect.png)
-
-
-5. Terminal will appear on the browser. Testing with the command ``` sudo tcpdump -nn port 22 ``` and ```sudo tcpdump ``` we will see no SSH traffic but only HTTPS traffic.
-
-![Connect](/images/3.connect/004-connect.png)
-
-{{% notice note %}}
- Above, we have created a connection to the public instance without opening SSH port 22, for better security, avoiding any attack to the SSH port.\
-One disadvantage of the above method is that we have to open the Security Group outbound at port 443 to the internet. Since it's a public instance, it probably won't be a problem, but if you want extra security, you can block port 443 to the internet and still use the Session Manager. We will go through this in the private instance section below.
- {{% /notice %}}
-
- You can click terminate to end the currently connected session before proceeding to the next step.
+For more information about `AWS::Serverless::Table`, refer to SAM's resource [here](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html).

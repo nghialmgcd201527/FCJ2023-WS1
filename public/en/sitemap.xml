@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/2-prerequiste/2.1-createcloud9workspace/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-prerequiste/2.1-createcloud9workspace/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-prerequiste/2.1-createcloud9workspace/"
+                />
+  </url><url>
     <loc>/3-serverlessbackend/3.1-dynamodb/</loc>
     <xhtml:link
                 rel="alternate"
@@ -24,54 +36,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/1-introduce/"
-                />
-  </url><url>
-    <loc>/2-prerequiste/2.1-createcloud9workspace/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-prerequiste/2.1-createcloud9workspace/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-prerequiste/2.1-createcloud9workspace/"
-                />
-  </url><url>
-    <loc>/2-prerequiste/2.2-ensurenodejsversion/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-prerequiste/2.2-ensurenodejsversion/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-prerequiste/2.2-ensurenodejsversion/"
-                />
-  </url><url>
-    <loc>/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/"
-                />
-  </url><url>
-    <loc>/2-prerequiste/2.4-installamplifycli/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-prerequiste/2.4-installamplifycli/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-prerequiste/2.4-installamplifycli/"
                 />
   </url><url>
     <loc>/</loc>
@@ -98,6 +62,18 @@
                 href="/3-serverlessbackend/3.2-lambdafunction/"
                 />
   </url><url>
+    <loc>/2-prerequiste/2.2-ensurenodejsversion/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-prerequiste/2.2-ensurenodejsversion/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-prerequiste/2.2-ensurenodejsversion/"
+                />
+  </url><url>
     <loc>/2-prerequiste/</loc>
     <xhtml:link
                 rel="alternate"
@@ -122,6 +98,18 @@
                 href="/3-serverlessbackend/"
                 />
   </url><url>
+    <loc>/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/"
+                />
+  </url><url>
     <loc>/4-apigateway/</loc>
     <xhtml:link
                 rel="alternate"
@@ -132,6 +120,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="/4-apigateway/"
+                />
+  </url><url>
+    <loc>/2-prerequiste/2.4-installamplifycli/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-prerequiste/2.4-installamplifycli/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-prerequiste/2.4-installamplifycli/"
                 />
   </url><url>
     <loc>/7-rekognition/</loc>

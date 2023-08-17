@@ -6,84 +6,30 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice info %}}
-**Port Forwarding** is a useful way to redirect network traffic from one IP address - Port to another IP address - Port. With **Port Forwarding** we can access an EC2 instance located in the private subnet from our workstation.
-{{% /notice %}}
+![VPC](/images/6.test/6-1.png)
 
-We will configure **Port Forwarding** for the RDP connection between our machine and **Private Windows Instance** located in the private subnet we created for this exercise.
+After logging in with any username or password, you can create a new task by entering **Title** and **Body**. The **Due date** part can be left blank.
 
-![port-fwd](/images/arc-04.png)
+Click **Create** to create a new task, it will be displayed in **My Tasks.**
 
-#### Create IAM user with permission to connect SSM
+As you will see in the image below.
 
-1. Go to [IAM service management console](https://console.aws.amazon.com/iamv2/home)
-   - Click **Users** , then click **Add users**.
+![VPC](/images/6.test/6-2.png)
 
-![FWD](/images/5.fwd/001-fwd.png)
+When you click the **Create task** button, things work:
 
-2. At the **Add user** page.
-   - In the **User name** field, enter **Portfwd**.
-   - Click on **Access key - Programmatic access**.
-   - Click **Next: Permissions**.
+1. Request with **POST** method is sent to API Gateway endpoint **/tasks**.
+2. The request is authenticated by the Lambda authorizer, using the HTTP header `Authentication: Bearer <token>`.
+3. The body of that request is passed to the Lambda function **CreateTaskFunction.**
+4. The task information entered above will be stored in the DynamoDB table.
+5. An HTTP status code 200 response will be returned to the web application.
+6. The web application refreshes the list of tasks because the request with the **GET** method is sent to the API Gateway endpoint **/tasks.**
+7. Again, the request is authenticated by the Lambda authorizer and passed to the Lambda function **GetTasksFunction.**
+8. Lambda function **GetTasksFunction** retrieves the list of tasks from the DynamoDB table and returns the list of tasks to the authenticated user.
 
-![FWD](/images/5.fwd/002-fwd.png)
+Let's create more new tasks and try deleting one to get a better understanding of how requests are processed.
 
-3. Click **Attach existing policies directly**.
+### Content
 
-   - In the search box, enter **ssm**.
-   - Click on **AmazonSSMFullAccess**.
-   - Click **Next: Tags**, click **Next: Reviews**.
-   - Click **Create user**.
-
-4. Save **Access key ID** and **Secret access key** information to perform AWS CLI configuration.
-
-#### Install and Configure AWS CLI and Session Manager Plugin
-
-To perform this hands-on, make sure your workstation has [AWS CLI]() and [Session Manager Plugin](https://docs.aws.amazon.com/systems-manager/latest/userguide/session) installed -manager-working-with-install-plugin.html)
-
-More hands-on tutorials on installing and configuring the AWS CLI can be found [here](https://000011.awsstudygroup.com/).
-
-{{%notice tip%}}
-With Windows, when extracting the **Session Manager Plugin** installation folder, run the **install.bat** file with Administrator permission to perform the installation.
-{{%/notice%}}
-
-#### Implement Portforwarding
-
-1. Run the command below in **Command Prompt** on your machine to configure **Port Forwarding**.
-
-```
-   aws ssm start-session --target (your ID windows instance) --document-name AWS-StartPortForwardingSession --parameters portNumber="3389",localPortNumber="9999" --region (your region)
-```
-
-{{%notice tip%}}
-
-**Windows Private Instance** **Instance ID** information can be found when you view the EC2 Windows Private Instance server details.
-
-{{%/notice%}}
-
-- Example command:
-
-```
-C:\Windows\system32>aws ssm start-session --target i-06343d7377486760c --document-name AWS-StartPortForwardingSession --parameters portNumber="3389",localPortNumber="9999" --region ap-southeast-1
-```
-
-{{%notice warning%}}
-
-If your command gives an error like below: \
-SessionManagerPlugin is not found. Please refer to SessionManager Documentation here: http://docs.aws.amazon.com/console/systems-manager/session-manager-plugin-not-found\
-Prove that you have not successfully installed the Session Manager Plugin. You may need to relaunch **Command Prompt** after installing **Session Manager Plugin**.
-
-{{%/notice%}}
-
-2. Connect to the **Private Windows Instance** you created using the **Remote Desktop** tool on your workstation.
-   - In the Computer section: enter **localhost:9999**.
-
-![FWD](/images/5.fwd/003-fwd.png)
-
-3. Return to the administration interface of the System Manager - Session Manager service.
-   - Click tab **Session history**.
-   - We will see session logs with Document name **AWS-StartPortForwardingSession**.
-
-![FWD](/images/5.fwd/004-fwd.png)
-
-Congratulations on completing the lab on how to use Session Manager to connect and store session logs in S3 bucket. Remember to perform resource cleanup to avoid unintended costs.
+- [Viewing the data in DynamoDB](6.1-dynamodb/)
+- [Logging and Monitoring](6.2-logandmonitor/)

@@ -19,7 +19,7 @@ node --version
 
 ![VPC](/images/2.prerequisite/2.2-ensurenodejsversion/ensurenodejs-1.png)
 
-Nếu phiên bản Node.js mà bạn đang sử dụng là v16.x thì bạn có thể bỏ qua bước này và đến phần **Clone Git repository.** Nếu phiên bản mà bạn đang sử dụng khác phiên bản trên thì hãy theo dõi các bước sau để cài đặt phiên bản Node.js phù hợp với workshop này bằng trang terminal vừa tạo.
+Nếu phiên bản Node.js mà bạn đang sử dụng là v16.x thì bạn có thể bỏ qua bước này và đến phần [**Clone Git repository**](/2-prerequiste/2.3-clonerepositoryandavoidingfreespace). Nếu phiên bản mà bạn đang sử dụng khác phiên bản trên thì hãy theo dõi các bước sau để cài đặt phiên bản Node.js phù hợp với workshop này bằng trang terminal vừa tạo.
 
 Ở trang terminal trên Cloud9, hãy chạy lệnh sau để đảm bảo rằng bạn đã cài đặt phiên bản mới nhất của [Node.js Version Manager (nvm)](https://github.com/nvm-sh/nvm) (ở thời điểm mình viết workshop, đang là version 0.39.0).
 

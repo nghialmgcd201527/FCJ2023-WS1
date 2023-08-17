@@ -9,16 +9,17 @@ chapter: false
 
 ### Overall
 
-In this lab, you'll learn the basics and practice of Amazon System Manager - Session Manager
-. Perform creating public and private instance connections.
+In this workshop, we will create a “Todo app” using Serverless and API to store and retrieve data in the Cloud. In addition, we will combine Machine Learning to identify keywords related to the images that you upload for each Task.
 
 ![ConnectPrivate](/images/1.intro/1-1.png)
 
 ### Content
 
-1.  [Introduction ](1-introduce/)
-2.  [Preparation](2-prerequiste/)
-3.  [Connect to EC2 instance](3-accessibilitytoinstances/)
-4.  [Manage session logs](4-s3log/)
-5.  [Port Forwarding](5-Portfwd/)
-6.  [Clean up resources](6-cleanup/)
+1.  [Introduction](1-introduce/)
+2.  [Prerequisites](2-prerequiste/)
+3.  [Build a serverless backend: AWS Lambda and AWS SAM](3-serverlessbackend/)
+4.  [Configure API authorization: API Gateway](4-apigateway/)
+5.  [Build and deploy a web application: AWS Amplify](5-deploy/)
+6.  [Test the application](6-test/)
+7.  [Configure image metadata extraction: Amazon Rekognition](7-rekognition/)
+8.  [Terminate Resources](8-terminate/)

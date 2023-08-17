@@ -1,26 +1,52 @@
 ---
-title : "Preparing VPC and EC2"
-date : "`r Sys.Date()`"
-weight : 1
-chapter : false
-pre : " <b> 2.1 </b> "
+title: "Ensure Node.js Version"
+date: "`r Sys.Date()`"
+weight: 2
+chapter: false
+pre: " <b> 2.2 </b> "
 ---
 
-In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.
+Cloud9 has Node.js pre-installed but it may not be compatible with the time I do this workshop. To ensure this, install Node.js v16 (codename **Gallium**) by running the following command in the Cloud9 terminal.
 
-The architecture overview after you complete this step will be as follows:
+Let's check the current Node.js version running on Cloud9 with the following command:
 
-![VPC](/images/arc-01.png)
+```
+node --version
 
-To learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:
-  - [About Amazon EC2](https://000004.awsstudygroup.com/en/)
-  - [Works with Amazon VPC](https://000003.awsstudygroup.com/en/)
+```
 
+This is the version of Node.js that I am using in this workshop.
 
-### Content
-  - [Create VPC](2.1.1-createvpc/)
-  - [Create Public Subnet](2.1.2-createpublicsubnet/)
-  - [Create Private Subnet](2.1.3-createprivatesubnet/)
-  - [Create security group](2.1.4-createsecgroup/)
-  - [Create public Linux server](2.1.5-createec2linux/)
-  - [Create private Windows server](2.1.6-createec2windows/)
+![VPC](/images/2.prerequisite/2.2-ensurenodejsversion/ensurenodejs-1.png)
+
+If the version of Node.js you are using is v16.x then you can skip this step and go to [**Clone Git repository**](/2-prerequiste/2.3-clonerepositoryandavoidingfreespace). If the version you are using is different from the above then follow along Follow these steps to install the right version of Node.js for this workshop using the terminal page you just created.
+
+At the terminal page on Cloud9, run the following command to make sure you have the latest version of [Node.js Version Manager (nvm)](https://github.com/nvm-sh/nvm) installed (At the time I wrote the workshop, it was version 0.39.0).
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+
+```
+
+Next we will install Node.js v16 "Gallium":
+
+```
+nvm install 'lts/gallium'
+
+```
+
+Finally, we will choose the above Node.js version as the default version:
+
+```
+nvm alias default 'lts/gallium'
+
+```
+
+Review the Node.js instance running on Cloud9 with the following command:
+
+```
+node --version
+
+```
+
+The result we need is to start with `v16`.

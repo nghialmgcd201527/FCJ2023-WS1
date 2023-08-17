@@ -1,26 +1,37 @@
 ---
-title : "Preparing VPC and EC2"
-date : "`r Sys.Date()`"
-weight : 1
-chapter : false
-pre : " <b> 2.1 </b> "
+title: "Create a Cloud9 Workspace"
+date: "`r Sys.Date()`"
+weight: 1
+chapter: false
+pre: " <b> 2.1 </b> "
 ---
 
-In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.
+#### Create a Cloud9 Workspace
 
-The architecture overview after you complete this step will be as follows:
+1. Type **Cloud9** in the service search bar on the AWS Console then select **Cloud9**.
+2. Click **Create environment**
+3. Name the Cloud9 Workspace **serverless-workshop.**
+4. In the **Description** field, enter the purpose you want to use in this workspace. Enter **deploy "Todos app"**
+5. **Environment type,** here we will create a server to run this Cloud9 workspace. I will choose **New EC2 instance** option to create a new server.
 
-![VPC](/images/arc-01.png)
+![Name for Cloud9 Workspace và chọn Environment type](/images/2.prerequisite/2.1-createcloud9workspace/2.1-1.png)
 
-To learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:
-  - [About Amazon EC2](https://000004.awsstudygroup.com/en/)
-  - [Works with Amazon VPC](https://000003.awsstudygroup.com/en/)
+6. Go to settings for **New EC2 instance,** select **Additional instance types** then we choose **t3.medium**
 
+![Setting cho new EC2 instance](/images/2.prerequisite/2.1-createcloud9workspace/2.1-2.png)
 
-### Content
-  - [Create VPC](2.1.1-createvpc/)
-  - [Create Public Subnet](2.1.2-createpublicsubnet/)
-  - [Create Private Subnet](2.1.3-createprivatesubnet/)
-  - [Create security group](2.1.4-createsecgroup/)
-  - [Create public Linux server](2.1.5-createec2linux/)
-  - [Create private Windows server](2.1.6-createec2windows/)
+7. Leave defaults for other settings. Click the **Create** button
+
+![Keep default](/images/2.prerequisite/2.1-createcloud9workspace/2.1-3.png)
+
+8. Wait about 10 minutes for Cloud9 Workspace to be created. Once the Cloud9 Workspace is created, we will have an environment to work with the AWS CLI and other tools. In the list of **Environments** created, find the **serverless-workshop** environment and click the **Open** button to open the Cloud9 environment.
+
+![VPC](/images/2.prerequisite/2.1-createcloud9workspace/2.1-4.png)
+
+10. After the environment opens, let's close the sections below that were initialized at the start and create a new **terminal page**.
+
+![VPC](/images/2.prerequisite/2.1-createcloud9workspace/2.1-5.png)
+
+Our workspace will look like this.
+
+![VPC](/images/2.prerequisite/2.1-createcloud9workspace/createcloud9-6.png)

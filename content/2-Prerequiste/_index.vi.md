@@ -18,7 +18,7 @@ Chúng ta thường dùng môi trường phát triển tích hợp (Integrated D
 
 #### **Các vùng hỗ trợ service Amazon Rekognition**
 
-Hãy lưu ý rằng không phải tất cả các service của AWS luôn có sẵn tại tất cả các vùng. Trong bài workshop này, chúng ta sẽ sử dụng service Amazon Rekognition, nó sẽ chỉ phục vụ cho các vùng dưới đây:
+Hãy lưu ý rằng không phải tất cả các service của AWS luôn có sẵn tại tất cả các vùng. Trong bài workshop này, chúng ta sẽ sử dụng service [Amazon Rekognition](https://aws.amazon.com/rekognition/), nó sẽ chỉ phục vụ cho các vùng dưới đây:
 
 - US East (Ohio) us-east-2
 - US East (N. Virginia) us-east-1
@@ -39,4 +39,6 @@ Xem thêm cập nhật mới nhất về [Amazon Rekognition](https://docs.aws.a
 ### Nội dung
 
 - [Tạo Cloud9 Workspace](2.1-createcloud9workspace/)
-- [Cài đặt Amplify CLI](2.2-installamplifycli/)
+- [Ensure Node.js Version](2.2-ensurenodejsversion/)
+- [Clone Git repository và vấn đề của dung lượng trống Cloud9](2.3-clonerepositoryandavoidingfreespace/)
+- [Cài đặt Amplify CLI](2.4-installamplifycli/)
